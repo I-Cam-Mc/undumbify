@@ -32,6 +32,19 @@ git clone https://github.com/I-Cam-Mc/undumbify.git ~/.codex/skills/undumbify
 
 Codex can invoke the canonical skill as `$undumbify`. Slash aliases require corresponding routing instructions in the user's `AGENTS.md`.
 
+Add this under the deliberate modes section of `~/.codex/AGENTS.md`:
+
+```markdown
+### `/undumb`, `/undumbify`, and `/undumbifyMAX`
+
+Treat these commands as explicit invocations of the installed `undumbify` skill:
+
+- `/undumb` selects MIN.
+- `/undumbify` selects STANDARD.
+- `/undumbifyMAX` selects MAX.
+- `/upgrade` is an optional legacy alias for STANDARD.
+```
+
 ## Design choices
 
 - A short intent echo confirms the model's interpretation before detailed work.
