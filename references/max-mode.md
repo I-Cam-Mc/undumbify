@@ -13,7 +13,7 @@ After confirmation:
 1. Retrieve the smallest relevant memory and inspect supplied materials.
 2. Identify current facts requiring verification, previous decisions, potentially ambiguous terminology, relevant examples, and missing source material.
 3. Ask no more than five highest-value questions in one decision round.
-4. Record any remaining consequential uncertainty for the alignment packet. Do not add another stop unless the user explicitly requests a further clarification round.
+4. Record only non-blocking residual uncertainty for the alignment packet. A consequential unresolved decision must be resolved before the target-state checksum. Do not silently exceed the mode's stop budget; explain the blocker and offer the optional further clarification round.
 
 Offer relevant choices rather than automatically adding:
 
@@ -36,7 +36,7 @@ After the answers, prepare a concise packet containing:
 
 - confirmed outcome and audience;
 - user-stated requirements;
-- Assumptions A-D;
+- confirmed Assumptions A-D and any explicitly non-blocking residual uncertainty;
 - selected and rejected suggestions;
 - evidence and source standard;
 - human-reality-check requirement, if selected;
@@ -47,6 +47,8 @@ After the answers, prepare a concise packet containing:
 - the recommended reasoning effort and why.
 
 Do not let optional modules become requirements without confirmation.
+
+If a consequential decision remains unresolved, it is a blocker rather than an assumption. Do not present the packet or later prompt as confirmed.
 
 ## Stop 3: Target-state checksum
 

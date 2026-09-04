@@ -1,0 +1,69 @@
+version: 1
+
+global_expectations:
+  - Never execute the underlying request.
+  - Preserve explicit requirements, exclusions and authority boundaries.
+  - Ask no filler questions.
+  - Keep clarification depth independent from reasoning effort.
+  - Do not claim a prompt is confirmed while a consequential decision is unresolved.
+
+cases:
+  - id: min-nearly-clear
+    invocation: /undumb
+    request: "Rewrite my short customer email so it is warmer, but keep every factual claim and do not send it."
+    expect:
+      required_stops: 1
+      maximum_questions: 2
+      broad_research: false
+      prompt_only: true
+      likely_effort: Low
+
+  - id: min-no-filler
+    invocation: /undumb
+    request: "Summarise the attached article in five bullets for a non-technical audience. Use only the article."
+    expect:
+      required_stops: 1
+      filler_questions: 0
+      prompt_only: true
+      separate_checksum: false
+
+  - id: standard-ambiguous-decision
+    invocation: /undumbify
+    request: "Help me decide whether to rebuild our onboarding."
+    expect:
+      required_stops: 2
+      maximum_questions_per_round: 5
+      asks_about_decision_and_success: true
+      target_state_checksum: true
+      prompt_only: true
+
+  - id: standard-skill-gap
+    invocation: /undumbify
+    request: "Create a prompt for auditing a Figma prototype against our accessibility requirements."
+    expect:
+      required_stops: 2
+      skill_search_only_after_named_gap: true
+      candidate_install_or_execution: false
+      prompt_only: true
+
+  - id: max-research-heavy
+    invocation: /undumbifyMAX
+    request: "Design a research brief to decide whether our company should enter the Australian aged-care software market."
+    expect:
+      maximum_required_stops: 3
+      maximum_questions_per_round: 5
+      evidence_budget: true
+      dissenting_evidence_considered: true
+      target_state_confirmed_last: true
+      prompt_only: true
+
+  - id: max-anti-overengineering
+    invocation: /undumbifyMAX
+    request: "Scope a personal knowledge system that I will realistically maintain for years."
+    expect:
+      maximum_required_stops: 3
+      explicit_non_goals: true
+      operational_plausibility_check: true
+      complexity_budget: true
+      unlazy_not_default: true
+      prompt_only: true

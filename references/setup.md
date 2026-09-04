@@ -1,8 +1,8 @@
 # First-use setup
 
-At first use, look for a user-scoped `undumbify.preferences` record. If none exists, do not replace the intent echo or delay the current request with setup. Proceed using the defaults below, ask for a missing surface or catalogue only when it materially changes the current recommendation, and offer setup after the first completed prompt round.
+Read this file only when the user selects setup or explicitly invokes `$undumbify setup`. If no preferences were available during the preceding round, that round should already have proceeded with the defaults below rather than delaying the request.
 
-Append setup to the ordinary next-round choice rather than creating a second trailing question:
+Setup is optional and happens after a usable prompt. Append it to the ordinary next-round choice rather than creating another required confirmation stop:
 
 `Another clarification round? Yes / No. On first use, add "+ setup" to configure future defaults.`
 
