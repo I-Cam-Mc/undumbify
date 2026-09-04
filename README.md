@@ -22,6 +22,22 @@ All modes remain prompt-only. MAX means deeper clarification, not maximum model 
 
 On first use, Undumbify proceeds with sensible defaults and offers its optional preference questionnaire after producing the first useful prompt. Setup does not consume a mode's confirmation budget.
 
+## Designed for GPT-6 Astra
+
+Undumbify was designed around GPT-6 Astra's documented behaviour. Astra is more likely to ask focused questions when an answer could change the outcome, follows skill instructions more strongly than earlier models, and can be more sensitive to unclear or conflicting guidance in skills and `AGENTS.md`. It also tends towards detailed, formatted responses and broad verification unless the desired scope is explicit. See OpenAI's [GPT-6 Astra model guidance](https://developers.openai.com/api/docs/guides/latest-model).
+
+CLEAR turns those characteristics into a predictable prompt-scoping workflow:
+
+- The intent echo makes Astra's interpretation visible before deeper work begins.
+- Question and stop budgets keep useful clarification from becoming ceremony.
+- Progressive disclosure reduces instruction conflicts and loads MAX-only guidance only when selected.
+- Evidence, complexity, and stopping budgets guard against unnecessary detail and verification.
+- Reasoning effort is chosen from the residual difficulty after scoping, independently of MIN, STANDARD, or MAX depth.
+
+Astra supports Low, Medium, High, XHigh, and Max reasoning effort. Undumbify normally starts from the lowest level likely to satisfy the confirmed target state and escalates only for a specific reason. `/undumbifyMAX` means maximum clarification depth, not automatic Max reasoning. See the official [GPT-6 Astra model specification](https://developers.openai.com/api/docs/models/gpt-6-astra).
+
+Astra is the primary design target, but the workflow remains usable with other capable instruction-following models.
+
 ## Install
 
 Clone this repository into the Codex skills directory:
