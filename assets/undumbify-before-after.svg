@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">The same raw request, with and without Undumbify</title>
+  <desc id="desc">A comparison showing how an ordinary raw request can lead to missed context, shallow work, drift or overengineering, while Undumbify confirms meaning, questions, assumptions and evidence before producing a prompt with right-sized reasoning.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09090b"/>
+      <stop offset="0.62" stop-color="#101116"/>
+      <stop offset="1" stop-color="#101b3b"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#356dff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#356dff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <pattern id="dither" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.13"/>
+      <circle cx="8" cy="7" r="0.8" fill="#ffffff" fill-opacity="0.07"/>
+    </pattern>
+    <filter id="softBlur" x="-10%" y="-20%" width="120%" height="140%">
+      <feGaussianBlur stdDeviation="0.55"/>
+    </filter>
+    <style>
+      .sans { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .mono { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
+      .label { font-size: 12px; font-weight: 700; letter-spacing: 1.8px; }
+      .body { font-size: 17px; font-weight: 600; }
+      .small { font-size: 12px; font-weight: 600; letter-spacing: 0.5px; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" rx="24" fill="url(#background)"/>
+  <rect width="1200" height="630" rx="24" fill="url(#grid)"/>
+  <ellipse cx="1020" cy="520" rx="420" ry="310" fill="url(#blueGlow)"/>
+
+  <g transform="translate(64 45)">
+    <rect width="34" height="34" rx="8" fill="#356dff"/>
+    <text class="sans" x="17" y="25" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800">/</text>
+    <text class="mono" x="48" y="22" fill="#f5f5f7" font-size="14" font-weight="700" letter-spacing="1.8">UNDUMBIFY</text>
+  </g>
+  <text class="mono" x="1136" y="66" text-anchor="end" fill="#9ba2b4" font-size="12" font-weight="700" letter-spacing="1.2">GPT-5.6 SOL + GPT-6 ASTRA</text>
+
+  <text class="sans" x="64" y="140" fill="#f7f7f9" font-size="45" font-weight="760" letter-spacing="-1.6">Same model. Same effort. Less guessing.</text>
+  <text class="sans" x="66" y="174" fill="#a9afbd" font-size="17">One ordinary request. Two possible paths.</text>
+
+  <g transform="translate(64 211)">
+    <rect width="512" height="338" rx="18" fill="#111217" stroke="#31333c"/>
+    <rect width="512" height="338" rx="18" fill="url(#dither)" opacity="0.4"/>
+    <text class="mono label" x="28" y="37" fill="#8f95a3">WITHOUT A CONFIRMATION LAYER</text>
+
+    <rect x="28" y="58" width="456" height="72" rx="12" fill="#17181e" stroke="#3a3c45"/>
+    <text class="mono small" x="46" y="83" fill="#7f8592">RAW REQUEST</text>
+    <text class="sans body" x="46" y="111" fill="#d9dbe1" filter="url(#softBlur)">“Whatever you can be bothered prompting.”</text>
+
+    <path d="M256 145V174" stroke="#5b5f6b" stroke-width="1.5"/>
+    <path d="M250 168L256 175L262 168" fill="none" stroke="#5b5f6b" stroke-width="1.5"/>
+    <text class="sans" x="256" y="203" text-anchor="middle" fill="#a2a7b1" font-size="14" font-weight="700">THE MODEL FILLS IN THE MISSING BRIEF</text>
+
+    <text class="mono small" x="28" y="242" fill="#727887">CAN BECOME</text>
+    <g class="mono" font-size="11" font-weight="700" letter-spacing="0.6">
+      <rect x="28" y="258" width="130" height="34" rx="7" fill="#1a1b21" stroke="#373944"/>
+      <text x="93" y="279" text-anchor="middle" fill="#b6bac4">MISSED CONTEXT</text>
+      <rect x="167" y="258" width="92" height="34" rx="7" fill="#1a1b21" stroke="#373944"/>
+      <text x="213" y="279" text-anchor="middle" fill="#b6bac4">SHALLOW</text>
+      <rect x="268" y="258" width="76" height="34" rx="7" fill="#1a1b21" stroke="#373944"/>
+      <text x="306" y="279" text-anchor="middle" fill="#b6bac4">DRIFT</text>
+      <rect x="353" y="258" width="131" height="34" rx="7" fill="#1a1b21" stroke="#373944"/>
+      <text x="418.5" y="279" text-anchor="middle" fill="#b6bac4">OVERENGINEERED</text>
+    </g>
+    <text class="sans" x="28" y="318" fill="#747a88" font-size="12">Or internally coherent, but wrong for the user.</text>
+  </g>
+
+  <g transform="translate(624 211)">
+    <rect width="512" height="338" rx="18" fill="#111522" stroke="#356dff" stroke-width="1.5"/>
+    <path d="M0 18Q0 0 18 0H494Q512 0 512 18V64H0Z" fill="#356dff" fill-opacity="0.08"/>
+    <text class="mono label" x="28" y="37" fill="#7ea0ff">WITH /UNDUMBIFY</text>
+
+    <rect x="28" y="58" width="456" height="72" rx="12" fill="#141a2a" stroke="#3f5794"/>
+    <text class="mono small" x="46" y="83" fill="#7ea0ff">THE SAME RAW REQUEST</text>
+    <text class="sans body" x="46" y="111" fill="#f3f5fb">“Whatever you can be bothered prompting.”</text>
+
+    <path d="M256 145V174" stroke="#527bdc" stroke-width="1.5"/>
+    <path d="M250 168L256 175L262 168" fill="none" stroke="#527bdc" stroke-width="1.5"/>
+    <text class="sans" x="256" y="201" text-anchor="middle" fill="#dce5ff" font-size="14" font-weight="700">YOU CONFIRM THE TARGET BEFORE EXECUTION</text>
+
+    <text class="mono" x="256" y="232" text-anchor="middle" fill="#8eaaff" font-size="11" font-weight="700" letter-spacing="0.55">MEANING · QUESTIONS · ASSUMPTIONS · EVIDENCE</text>
+
+    <rect x="28" y="250" width="456" height="66" rx="12" fill="#356dff"/>
+    <text class="sans" x="256" y="278" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800">CONFIRMED PROMPT + RIGHT-SIZED REASONING</text>
+    <text class="mono" x="256" y="299" text-anchor="middle" fill="#dbe5ff" font-size="11" font-weight="700" letter-spacing="1.6">LOW · MEDIUM · HIGH</text>
+  </g>
+
+  <text class="mono" x="64" y="591" fill="#7e8492" font-size="12" font-weight="700" letter-spacing="1.1">SCOPE FIRST. THEN SPEND THE REASONING.</text>
+  <path d="M922 586H1136" stroke="#356dff" stroke-width="2"/>
+</svg>

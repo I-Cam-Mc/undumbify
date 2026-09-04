@@ -1,12 +1,14 @@
 # /undumbify, /undumb and /undumbifymax - for using 5.6 & Astra on low-med-high without it being dumb
 
-You should not have to turn reasoning to maximum, write a miniature specification, or watch a model start thinking just to find out whether it understood you.
+## Want consistently strong results from GPT-5.6 and Astra without defaulting to XHigh or Max?
 
-GPT-5.6 Sol and GPT-6 Astra are extremely capable at lower reasoning settings when they are solving the right problem. The expensive failure is often earlier: an ambiguous word, an unstated assumption, the wrong idea of success, or a model confidently expanding a request in a direction you never intended.
+Low, Medium and High can produce excellent work, but not reliably from an ordinary one-shot request. The model may under-scope the task, skip important context or evidence, stop at the first plausible answer, or compensate with unnecessary complexity.
 
-Undumbify adds a short confirmation layer before the expensive work. It tells you what the model thinks you mean, asks only the questions likely to change the result, makes assumptions inspectable, and returns a copy-ready prompt. It never executes the underlying task.
+![The same raw request with and without Undumbify](assets/undumbify-before-after.svg)
 
-The aim is simple: **use the most intelligent model at the lowest reasoning effort that is likely to produce a reliable result, and know why.**
+Undumbify scopes and confirms the work before execution. It tells you what the model understood, asks only the questions likely to change the result, makes assumptions inspectable, scopes the evidence and stopping point, and returns a copy-ready prompt. It never executes the underlying task.
+
+The aim is simple: **use the most intelligent model at the lowest reasoning effort likely to do the job properly, and know why.**
 
 ## Pick the smallest version that will do the job
 
