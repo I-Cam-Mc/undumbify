@@ -25,9 +25,9 @@
     <style>
       .sans { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
       .mono { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; }
-      .label { font-size: 12px; font-weight: 700; letter-spacing: 1.8px; }
+      .label { font-size: 14px; font-weight: 700; letter-spacing: 1.7px; }
       .body { font-size: 17px; font-weight: 600; }
-      .small { font-size: 12px; font-weight: 600; letter-spacing: 0.5px; }
+      .small { font-size: 13px; font-weight: 600; letter-spacing: 0.45px; }
     </style>
   </defs>
 
@@ -38,12 +38,12 @@
   <g transform="translate(64 45)">
     <rect width="34" height="34" rx="8" fill="#356dff"/>
     <text class="sans" x="17" y="25" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="800">/</text>
-    <text class="mono" x="48" y="22" fill="#f5f5f7" font-size="14" font-weight="700" letter-spacing="1.8">UNDUMBIFY</text>
+    <text class="mono" x="48" y="22" fill="#f5f5f7" font-size="15" font-weight="700" letter-spacing="1.7">UNDUMBIFY</text>
   </g>
-  <text class="mono" x="1136" y="66" text-anchor="end" fill="#9ba2b4" font-size="12" font-weight="700" letter-spacing="1.2">GPT-5.6 SOL + GPT-6 ASTRA</text>
+  <text class="mono" x="1136" y="66" text-anchor="end" fill="#9ba2b4" font-size="13" font-weight="700" letter-spacing="1.1">GPT-5.6 SOL + GPT-6 ASTRA</text>
 
-  <text class="sans" x="64" y="140" fill="#f7f7f9" font-size="45" font-weight="760" letter-spacing="-1.6">Same model. Same effort. Less guessing.</text>
-  <text class="sans" x="66" y="174" fill="#a9afbd" font-size="17">One ordinary request. Two possible paths.</text>
+  <text class="sans" x="64" y="140" fill="#f7f7f9" font-size="39" font-weight="760" letter-spacing="-1.35">Same model. Same reasoning level. Less guessing.</text>
+  <text class="sans" x="66" y="174" fill="#a9afbd" font-size="17">One ordinary request. One reasoning setting. Two possible paths.</text>
 
   <g transform="translate(64 211)">
     <rect width="512" height="338" rx="18" fill="#111217" stroke="#31333c"/>
@@ -59,7 +59,7 @@
     <text class="sans" x="256" y="203" text-anchor="middle" fill="#a2a7b1" font-size="14" font-weight="700">THE MODEL FILLS IN THE MISSING BRIEF</text>
 
     <text class="mono small" x="28" y="242" fill="#727887">CAN BECOME</text>
-    <g class="mono" font-size="11" font-weight="700" letter-spacing="0.6">
+    <g class="mono" font-size="11.5" font-weight="700" letter-spacing="0.5">
       <rect x="28" y="258" width="130" height="34" rx="7" fill="#1a1b21" stroke="#373944"/>
       <text x="93" y="279" text-anchor="middle" fill="#b6bac4">MISSED CONTEXT</text>
       <rect x="167" y="258" width="92" height="34" rx="7" fill="#1a1b21" stroke="#373944"/>
@@ -69,7 +69,7 @@
       <rect x="353" y="258" width="131" height="34" rx="7" fill="#1a1b21" stroke="#373944"/>
       <text x="418.5" y="279" text-anchor="middle" fill="#b6bac4">OVERENGINEERED</text>
     </g>
-    <text class="sans" x="28" y="318" fill="#747a88" font-size="12">Or internally coherent, but wrong for the user.</text>
+    <text class="sans" x="28" y="318" fill="#747a88" font-size="13">Or internally coherent, but wrong for the user.</text>
   </g>
 
   <g transform="translate(624 211)">
@@ -85,13 +85,13 @@
     <path d="M250 168L256 175L262 168" fill="none" stroke="#527bdc" stroke-width="1.5"/>
     <text class="sans" x="256" y="201" text-anchor="middle" fill="#dce5ff" font-size="14" font-weight="700">YOU CONFIRM THE TARGET BEFORE EXECUTION</text>
 
-    <text class="mono" x="256" y="232" text-anchor="middle" fill="#8eaaff" font-size="11" font-weight="700" letter-spacing="0.55">MEANING · QUESTIONS · ASSUMPTIONS · EVIDENCE</text>
+    <text class="mono" x="256" y="232" text-anchor="middle" fill="#8eaaff" font-size="11.5" font-weight="700" letter-spacing="0.45">MEANING · QUESTIONS · ASSUMPTIONS · EVIDENCE</text>
 
     <rect x="28" y="250" width="456" height="66" rx="12" fill="#356dff"/>
     <text class="sans" x="256" y="278" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800">CONFIRMED PROMPT + RIGHT-SIZED REASONING</text>
     <text class="mono" x="256" y="299" text-anchor="middle" fill="#dbe5ff" font-size="11" font-weight="700" letter-spacing="1.6">LOW · MEDIUM · HIGH</text>
   </g>
 
-  <text class="mono" x="64" y="591" fill="#7e8492" font-size="12" font-weight="700" letter-spacing="1.1">SCOPE FIRST. THEN SPEND THE REASONING.</text>
+  <text class="mono" x="64" y="591" fill="#7e8492" font-size="13" font-weight="700" letter-spacing="1">SCOPE FIRST. THEN SPEND THE REASONING.</text>
   <path d="M922 586H1136" stroke="#356dff" stroke-width="2"/>
 </svg>
