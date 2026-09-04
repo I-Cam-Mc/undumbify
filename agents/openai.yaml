@@ -1,0 +1,7 @@
+interface:
+  display_name: "Undumbify"
+  short_description: "Confirm intent and compile a stronger prompt"
+  default_prompt: "Use $undumbify to confirm what I mean, ask the highest-value questions, and return a copy-ready prompt without executing it."
+
+policy:
+  allow_implicit_invocation: false
