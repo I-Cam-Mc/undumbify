@@ -159,3 +159,7 @@ Treat these commands as explicit invocations of the installed `undumbify` skill:
 ```
 
 Restart Codex after installing the skill.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
