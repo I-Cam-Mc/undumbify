@@ -1,12 +1,12 @@
 # Human reality check
 
-Use this module only when lived experience, human preference, organisational practice, adoption, culture or operational plausibility could materially change the result.
+Use this module only when lived experience, human preference, organisational practice, adoption, culture or real-world practicality could change the result in an important way.
 
 Offer it as a choice unless the user already requested human perspectives. When selected:
 
 - seek relevant corroborating and dissenting perspectives;
 - verify quotations and identify the speaker's context;
-- distinguish empirical evidence, expert judgement, anecdote and model inference;
+- distinguish measured evidence, expert judgement, personal stories and model inference;
 - test whether the proposed outcome depends on idealised behaviour;
 - compare unconventional ideas with a conventional baseline without treating popularity as truth.
 

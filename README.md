@@ -1,5 +1,7 @@
 # /undumbify, /undumb and /undumbifymax - for using 5.6 & Astra on low-med-high without it being dumb
 
+> **Draft: testing is ongoing. Expect bugs.** The skill can miss requirements, add unwanted constraints or ask unnecessary questions. Review every generated prompt before running it. Reliable outcomes and lower-effort performance have not yet been established by controlled testing.
+
 ## Want strong results without writing a miniature specification every time?
 
 A short request leaves choices unstated. What outcome matters? Which context is relevant? How much evidence is enough? What is the model allowed to do? When should it stop?
@@ -138,9 +140,13 @@ Restart Codex after installing the skill.
 
 ## Testing, feedback and suggestions
 
-The cases in [`evals/`](evals/) test whether each mode preserves the request, asks useful questions, respects its stop limit, stays prompt-only and avoids unnecessary effort.
+This is an experimental draft, not a fully validated release. Testing and fixes are ongoing. The cases in [`evals/`](evals/) cover whether each mode preserves the request, asks useful questions, respects its stop limit, stays prompt-only and avoids unnecessary effort. The [evaluation protocol](evals/PROTOCOL.md) separates skill failures from simulator errors; test definitions are not claims that every case passes.
+
+The current draft prioritises existing success requirements and evidence of what is going wrong. These changes address observed failures, but the larger fixed-baseline comparison is still incomplete. See the [limited draft checks](evals/2026-09-05-draft-checks.md) for what was actually verified. No overall pass rate or Low/Medium/High reliability claim is made.
 
 Real prompts are even more useful. If a mode asks a useless question, misses an important gap, adds ceremony, recommends too much effort or changes what you asked for, please [open an issue](https://github.com/I-Cam-Mc/undumbify/issues). Test cases and improvement suggestions are welcome.
+
+When reporting a bug, include the command, model and effort, a redacted starting request, the relevant questions and answers, and what you expected instead. Do not post private data, credentials or confidential documents.
 
 Material changes are recorded in the [changelog](CHANGELOG.md), including what changed and what should be tested again.
 

@@ -2,10 +2,15 @@ version: 1
 
 global_expectations:
   - Never execute the underlying request.
-  - Preserve explicit requirements, exclusions and authority boundaries.
+  - Preserve every important confirmed requirement, exclusion and permission boundary.
   - Ask no filler questions.
   - Keep clarification depth independent from reasoning effort.
-  - Do not claim a prompt is confirmed while a consequential decision is unresolved.
+  - Do not claim a prompt is ready while a missing answer could change the result.
+  - Treat a user-provided list of allowed actions as complete.
+  - Do not invent hard numbers, required tools, exclusions, methods or chosen options.
+  - Compare the final prompt with the original request and every confirmed answer.
+  - Elicit any existing success requirements before proposing comparison or test criteria.
+  - For improvements to existing work, prioritise the observed problem and supporting evidence before optional modules.
 
 cases:
   - id: min-nearly-clear
@@ -34,6 +39,8 @@ cases:
       required_stops: 2
       maximum_questions_per_round: 5
       asks_about_decision_and_success: true
+      decision_questions_default_to_a_d: true
+      preference_questions_are_neutral: true
       target_state_checksum: true
       prompt_only: true
 
@@ -54,6 +61,8 @@ cases:
       maximum_questions_per_round: 5
       evidence_budget: true
       dissenting_evidence_considered: true
+      missing_answer_check: true
+      final_fidelity_check: true
       target_state_confirmed_last: true
       prompt_only: true
 
@@ -67,3 +76,23 @@ cases:
       complexity_budget: true
       unlazy_not_default: true
       prompt_only: true
+
+  - id: standard-existing-success-criterion
+    invocation: /undumbify
+    request: "Help me work out which of two homemade bike-light brackets is better. I don't want to just pick the one that looks nicer."
+    expect:
+      asks_for_existing_success_criteria: true
+      does_not_assume_riding_use: true
+      maximum_questions_per_round: 5
+      prompt_only: true
+    regression_note: "The original frozen case requires less than 2 mm movement over ten minutes under a 300 g load. Only give these details when asked. They must not be replaced with adjustable criteria."
+
+  - id: standard-existing-problem-evidence
+    invocation: /undumbify
+    request: "Help me improve a primary-school activity about weather and climate. The version I have feels a bit flat, and I want it to actually land."
+    expect:
+      asks_about_current_problem_or_evidence: true
+      prioritises_evidence_over_optional_modules: true
+      maximum_questions_per_round: 5
+      prompt_only: true
+    regression_note: "The original frozen case includes sample answers confusing climate with yesterday's temperature. Do not volunteer that evidence unless requested. Readiness of the original fixture is under-specified, so do not score a pending answer as an automatic skill failure."

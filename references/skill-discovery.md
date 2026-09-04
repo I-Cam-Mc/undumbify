@@ -1,6 +1,6 @@
 # Bounded skill discovery
 
-Search for a skill only after identifying a material capability gap. State the needed capability in plain language and the failure a specialised workflow might prevent.
+Search for a skill only after identifying an important capability gap. State the missing capability in plain language and the failure a specialised workflow might prevent.
 
 ## Widening search
 
@@ -20,12 +20,12 @@ Do not install, execute, or grant permissions to a candidate during Undumbify.
 Evaluate the actual skill contents, not just its name or description:
 
 - **Fit:** How precisely it addresses the capability gap.
-- **Instruction quality:** Whether the workflow is coherent, proportionate, and auditable.
-- **Trust:** Provenance, permissions, dependencies, and security implications.
+- **Instruction quality:** Whether the workflow makes sense, matches the size of the task, and can be checked.
+- **Trust:** Who made it, what it can access, what it depends on, and any security risk.
 - **Maintenance:** Recency, active maintainers, compatibility, and issue handling.
 - **Testability:** Whether its claimed benefit can be verified on a realistic case.
 - **Popularity:** Installs, downloads, stars, forks, contributors, usage, and longevity.
-- **Critical acclaim:** Independent recommendations from credible practitioners, respected collections, comparative reviews, case studies, and repeated positive reports from relevant users.
+- **Critical acclaim:** Independent recommendations from credible practitioners, respected collections, comparison reviews, case studies, and repeated positive reports from relevant users.
 
 Fit, instruction quality, and trust determine eligibility. Popularity and critical acclaim raise or lower confidence and help rank otherwise suitable candidates. They must not rescue a poor fit, and lack of popularity must not automatically exclude a uniquely suitable candidate.
 
@@ -36,7 +36,7 @@ Account for age and exposure when interpreting popularity. Treat creator testimo
 For each shortlisted candidate, report:
 
 - why it fits;
-- material limitations;
+- important limitations;
 - popularity evidence;
 - independent acclaim or criticism;
 - maintenance state;
@@ -44,4 +44,4 @@ For each shortlisted candidate, report:
 - confidence;
 - the smallest useful validation test.
 
-Recommend no more than one default candidate unless the trade-off is genuinely unresolved.
+Recommend no more than one default candidate unless two options have a real trade-off that the user must choose.

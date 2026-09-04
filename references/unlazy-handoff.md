@@ -5,9 +5,9 @@ Unlazy is a separate execution-completion workflow, never a dependency of Undumb
 Suggest an Unlazy handoff only when all are true:
 
 1. The eventual task involves execution rather than advice alone.
-2. It has several independently verifiable obligations.
+2. It has several separate obligations that can each be checked.
 3. Partial completion could plausibly look successful.
-4. The omission or retry cost is material.
+4. Missing one obligation or retrying the task would be costly.
 5. The target environment supports the workflow.
 
 If justified, name the specific completion risk and ask:
