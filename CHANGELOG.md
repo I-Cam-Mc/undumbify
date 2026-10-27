@@ -2,6 +2,26 @@
 
 Material upgrades to Undumbify are recorded here so users can see what changed, why it changed, and which behaviour deserves renewed testing.
 
+## 2026-10-27: practical clarification upgrade
+
+Still a draft with bugs and ongoing testing. This update targets interaction burden, not a claim of proven reliability at lower reasoning effort.
+
+### Changed
+
+- Ask a newly exposed consequential question directly. Removed the extra exchange asking permission to ask it. One short follow-up is allowed beyond the normal flow; unresolved decisions remain visibly blocked.
+- Distinguish choices needed now from investigation findings and source inputs for the later run. Do not require the answer to an investigation before preparing its prompt.
+- Clarify vague problem descriptions with an observed symptom or example. If there are no observations yet, explicitly scope exploratory work instead of inventing a problem or repeatedly asking.
+- Replace MAX's user-facing alignment packet with one short end-state confirmation. Keep the internal consistency checks and the final confirmation gate.
+- Count independent decisions, including assumption and success-check approvals, within the existing question budgets. Use useful lettered choices without forcing four options; accept free text.
+- Remove MIN's word-count floor and shorten the final wrapper. A fully specified brief needs no filler decision round.
+- Preserve prompt-only operation, permission boundaries, optional setup, another-round offer, bounded skill discovery and separate opt-in Unlazy routing.
+
+### Verification and limits
+
+The [update report](evals/2026-10-27-practical-update/README.md) records the fixed cases, before/after conversations, configuration and runtime hashes. It retains a first-candidate regression: STANDARD delivered too early without asking what an “unhelpful” search looked like. The correction was made after that candidate batch, not between its individual cases.
+
+These are targeted workflow checks, not the unfinished original-intent benchmark and not tests of downstream task quality or Low/Medium/High reliability. Review the generated prompt before running it. Testing, bug reports and suggestions remain welcome.
+
 ## 2026-09-05: draft for testing
 
 **Testing is ongoing. This draft has known bugs and is not a validated reliability release.** Review generated prompts before execution. The larger fixed-baseline comparison remains incomplete; no overall success rate or lower-effort performance claim is made.

@@ -5,7 +5,10 @@ global_expectations:
   - Preserve every important confirmed requirement, exclusion and permission boundary.
   - Ask no filler questions.
   - Keep clarification depth independent from reasoning effort.
-  - Do not claim a prompt is ready while a missing answer could change the result.
+  - Do not claim a prompt is ready while a consequential user decision is unresolved.
+  - Do not demand investigation findings or inputs explicitly promised for the later run before compiling its prompt.
+  - Ask a newly exposed consequential choice directly, without a permission-to-ask exchange.
+  - Count independent decisions, including assumption and success-check approvals, within the question budget.
   - Treat a user-provided list of allowed actions as complete.
   - Do not invent hard numbers, required tools, exclusions, methods or chosen options.
   - Compare the final prompt with the original request and every confirmed answer.
@@ -36,10 +39,10 @@ cases:
     invocation: /undumbify
     request: "Help me decide whether to rebuild our onboarding."
     expect:
-      required_stops: 2
+      normal_stops: 2
       maximum_questions_per_round: 5
       asks_about_decision_and_success: true
-      decision_questions_default_to_a_d: true
+      short_lettered_choices_when_helpful: true
       preference_questions_are_neutral: true
       target_state_checksum: true
       prompt_only: true
@@ -48,7 +51,7 @@ cases:
     invocation: /undumbify
     request: "Create a prompt for auditing a Figma prototype against our accessibility requirements."
     expect:
-      required_stops: 2
+      normal_stops: 2
       skill_search_only_after_named_gap: true
       candidate_install_or_execution: false
       prompt_only: true

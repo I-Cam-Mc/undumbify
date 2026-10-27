@@ -12,19 +12,19 @@ After confirmation:
 
 1. Retrieve only context likely to change the prompt.
 2. Resolve discoverable facts through read-only work when that is easier than asking the user.
-3. Ask no more than five highest-value questions in one compact round.
-4. Present no more than three important assumptions that still need confirmation.
-5. Offer only success checks whose selection would affect execution or verification.
+3. Ask no more than five highest-value decisions in one compact round, counting assumption or success-check approvals within that budget.
+4. Show no more than three important assumptions that need confirmation, only when relevant.
+5. Keep research findings and future source inputs for the later run when they are not needed to define the job.
 
 External discovery is optional, not a routine step. Use it only when a current fact or named capability gap could change the prompt in an important way.
 
 ## Stop 2: Decision round
 
-Combine the questions, assumptions and proposed success checks. Default each decision question to A-D choices, with D as `Other / specify` when useful. Use Yes/No for binary choices. Ask openly only when fixed choices would hide information needed for a safe or correct result. Allow compact answers such as `1B, 2D: ...`.
+Combine the questions, assumptions and proposed success checks. Use short lettered choices when helpful, up to A-D, with free text always allowed. Do not add options or questions to fill a quota. If the confirmed brief has no consequential gaps, skip this decision round and render.
 
 Do not recommend a full answer bundle. Keep preference questions neutral. Recommend one option only when known facts make it clearly safer or more effective, and put that recommendation below the choices.
 
-After the answers, apply the core missing-answer check. Render without a routine third stop only when no missing answer could change the result. Otherwise, name the missing choice and ask whether the user wants one more clarification round. Ask the new question only after a yes.
+After the answers, apply the core missing-information rule. A question that belongs to the later investigation is not a blocker. If a consequential user decision is newly exposed, ask it directly in one short follow-up, explaining why it matters. Do not insert a permission-to-ask exchange. If it remains unresolved, stop and name it rather than claiming readiness.
 
 ## Render
 

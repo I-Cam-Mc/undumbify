@@ -33,10 +33,14 @@ If an explicitly authorised urgent draft is published before that comparison fin
 | Interaction burden | Substantive questions, user turns, clarification stops and response length; count multipart decision demands, not only numbered labels |
 | Protocol integrity | Whether isolation, frozen versions, exact answers and the no-rescue rule were maintained |
 
-Report missed requirements even when the subject reasonably says it cannot finish. A correct pending result is distinct from a ready prompt that matches intent. Harmless placeholders are distinct from unanswered decisions that change the result.
+Report missed requirements even when the subject reasonably says it cannot finish. A correct pending result is distinct from a ready prompt that matches intent. Required future inputs and investigation findings are distinct from unresolved user decisions. A prompt can correctly assign research without already knowing its result; it must not assign an unapproved user trade-off to the executor as though it were agreed.
 
 Freeze material requirements with the bank. A complete intent match requires all of them, unchanged strength and scope, exact permission boundaries, no material unsupported additions, correct readiness and valid protocol. Coverage alone is insufficient.
 
 Do not use simulator satisfaction, number of corrections, a polished-looking prompt or workflow compliance as a substitute for intent match. Report first-attempt failures, not just the latest passing version. Show both `matched / valid cases` and `valid / all frozen cases` together. Invalid cases stay visible; never describe the entire suite as passing when any case is invalid.
 
 These simulations test prompt elicitation and compilation. They do not prove that executing the prompt improves real task outcomes, or that a skill tested at one reasoning effort works equally well at another. A before/after claim needs comparable cases and a controlled comparison, not just different development and holdout scores.
+
+## Targeted workflow regressions
+
+A bounded regression can instead use a fixed, complete user reply at each decision stage to test follow-up handling, preservation, readiness or reading burden. Freeze the requests, replies and stopping rule before the baseline. Use fresh subjects and unchanged replies for the candidate, and finish the planned baseline before editing runtime instructions. Label these as workflow regressions, not hidden-intent recovery: a scripted reply may supply facts the subject did not elicit. Preserve full user-facing outputs, configuration evidence and version hashes. Do not combine their counts with a frozen-intent benchmark or call them proof of real-world task quality.

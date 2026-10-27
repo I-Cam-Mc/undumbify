@@ -1,0 +1,29 @@
+{
+  "kind": "targeted workflow regression, not hidden-intent recovery or task-quality benchmark",
+  "baseline_commit": "cae6c37f3089c83cc71cc02cab2e3724b979d64a",
+  "subject_model": "inherited current model and effort; verify separately if available",
+  "cases": [
+    {
+      "id": "min-complete-request",
+      "request": "/undumb Create a prompt to proofread a short newsletter in Australian English. Fix spelling and punctuation only. Keep the wording, tone, facts and paragraph order. Return only the corrected text. I will paste the newsletter when I run the prompt later in Codex; use my currently selected model with Low effort available. Do not proofread anything now.",
+      "script": ["Yes."],
+      "expect": ["one confirmation before delivery", "no request to supply the newsletter now", "no invented length target or rewrite", "all limits preserved", "prompt only", "no padded minimum word count"],
+      "maximum_subject_turns": 2
+    },
+    {
+      "id": "standard-investigation",
+      "request": "/undumbify Create a prompt to investigate why our internal help centre search is unhelpful and recommend the smallest useful fix. The later executor can inspect a sanitised search export and the help articles, which I will supply then. Draft findings and recommendations only, no system changes. I do not yet know the cause or what success threshold is realistic. Run later in Codex on my currently selected model, with Low, Medium and High available.",
+      "script": ["Yes.", "The audience is our internal support team. The observed problem is that staff rephrase the same query several times and still ask colleagues. There is no agreed numeric target; propose measurable success checks after reviewing the export and articles. Keep the output to a short diagnosis, supporting evidence and the smallest recommended fix. Use only the supplied material, no external research, new tools or skills. I do not know the root cause or the right fix; investigating those is the job."],
+      "expect": ["does not demand the cause or a numeric threshold before writing an investigation prompt", "missing future materials remain explicit inputs", "user may need to decide business preferences but research findings are executor work", "no numeric target invented", "no system mutation", "ready after two answers unless a genuinely different unresolved decision is identified"],
+      "maximum_subject_turns": 3
+    },
+    {
+      "id": "max-no-process-expansion",
+      "request": "/undumbifyMAX Help me write a prompt for a practical handover note for a weekly community radio show. It needs to work for a substitute presenter, not become a new operating system. Draft only. I will run it later in Codex on the currently selected model with Low, Medium and High available.",
+      "script": ["Yes.", "The substitute already knows how to operate the studio. The gap is show-specific: the segment order and where approved music and station announcements are kept. I will supply the current rundown and shared-folder links when the prompt is run. Output one page, with segment order, material locations and who to contact if something is missing. Success means a substitute can find the right material and follow the rundown without guessing. No new tools, accounts, automations or changes to the show. Use only my supplied documents and leave missing names or links as explicit placeholders.", "Yes."],
+      "expect": ["no generic alignment packet repeating every answer", "one short final end-state check", "all user constraints and input placeholders preserved", "no new software or workflows", "no need to raise effort merely because MAX was selected", "prompt delivered after final confirmation"],
+      "maximum_subject_turns": 4
+    }
+  ],
+  "protocol": "Each fresh subject receives only the isolated skill snapshot and request. Send each fixed user reply in order after the corresponding subject turn. These replies deliberately provide a complete brief at the decision stage, so do not score hidden-intent elicitation. Stop at the cap even if no prompt was delivered. Do not rescue runs or change replies to improve scores. Record complete subject responses and distinguish delivery, preservation, unsupported additions, prompt-only compliance and interaction burden. Freeze all candidate runtime files before retesting. Execute no underlying task."
+}

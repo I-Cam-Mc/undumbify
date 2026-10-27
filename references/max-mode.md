@@ -13,7 +13,7 @@ After confirmation:
 1. Retrieve the smallest relevant memory and inspect supplied materials.
 2. Identify current facts requiring verification, previous decisions, potentially ambiguous terminology, relevant examples, and missing source material.
 3. Ask no more than five highest-value questions in one decision round.
-4. Record only unanswered points that cannot change the result in an important way. If a missing answer could change the result, resolve it before the target-state checksum. Do not silently exceed the stop limit. Name what is missing, ask whether the user wants an extra clarification round, and ask the new question only after a yes.
+4. Apply the core missing-information rule. Distinguish user choices from findings to investigate and inputs to supply later. If a consequential choice emerges after the round, ask it directly in one short follow-up before the end-state check. Do not silently choose or insert a permission-to-ask exchange.
 
 Offer relevant choices rather than automatically adding:
 
@@ -28,17 +28,17 @@ Offer relevant choices rather than automatically adding:
 
 ## Stop 2: Decisions
 
-Present the questions in one compact round. Default each decision question to A-D choices, with D as `Other / specify` when useful. Use Yes/No for binary choices. Ask openly only when fixed choices would hide information needed for a safe or correct result. Allow compact replies such as `1B, 2D: ...`.
+Present no more than five independent decisions in one compact round, including any assumption or success-check approvals. Prefer useful lettered choices, up to A-D, with free text always allowed. Skip the decision round if no consequential gap remains. Do not invent questions or options to justify MAX.
 
 Do not recommend a full answer bundle. Keep preference questions neutral. Recommend one option only when known facts make it clearly safer or more effective, and put that recommendation below the choices.
 
-## Alignment packet
+## Check alignment without a packet
 
-After the answers, prepare a concise packet containing:
+After the answers, check the following internally where relevant, not as a mandatory user-facing list:
 
 - confirmed outcome and audience;
 - user-stated requirements;
-- confirmed Assumptions A-D and any unanswered points that are safe to leave open;
+- confirmed Assumptions A-D and explicit inputs or findings for the later run;
 - selected and rejected suggestions;
 - evidence and source standard;
 - human-reality-check requirement, if selected;
@@ -48,19 +48,19 @@ After the answers, prepare a concise packet containing:
 - capability gaps, proposed tools, and skill-search result when relevant;
 - the recommended reasoning effort and why.
 
-Do not let optional modules become requirements without confirmation. Add `Missing answers that could change the result: none` only after applying the core missing-answer check.
+Do not let optional modules become requirements without confirmation. Do not print an empty assumptions list, a list of absent modules or a second summary of the user's answers.
 
-If a missing answer could still change the result, it is a blocker rather than an assumption. Do not present the packet or later prompt as confirmed.
+If a consequential user decision is unresolved, ask about it before the final check. Never present a guessed choice as confirmed. Unfinished investigation work can remain in a ready prompt.
 
 ## Stop 3: Target-state checksum
 
-End the alignment packet with one paragraph written from the perspective of the desired completed state:
+Show one short paragraph written from the perspective of the desired completed state:
 
 `At the end, the executor will have ...`
 
-The paragraph should make the intended artefact, use, boundaries, evidence, and success conditions easy to verify. Ask for yes or a correction. Render the final prompt only after confirmation. In the final response, do not reprint the confirmed checksum, alignment packet, or assumptions when the self-contained prompt already carries them.
+The paragraph should make the intended artefact, use, boundaries, evidence, and success conditions easy to verify. Add a short exception note only if a material assumption or unresolved input would otherwise be hidden. Ask for yes or a correction. Render only after confirmation. If the user corrects it, update the affected point and seek confirmation of the changed end state without restarting settled questions. Do not reprint the confirmed summary when delivering the self-contained prompt.
 
-Before delivery, compare the final prompt with the confirmed request, every answer, and the alignment packet. Preserve every important point. Keep the user's allowed-action list closed. Remove any new hard number, tool, exclusion, method or selected option that the user did not confirm and that is not strictly required by a confirmed need.
+Before delivery, compare the final prompt with the confirmed request and every answer. Preserve every important point. Keep the user's allowed-action list closed. Remove any new hard number, tool, exclusion, method or selected option that the user did not confirm and that is not strictly required by a confirmed need.
 
 ## Reality and anti-overengineering checks
 
