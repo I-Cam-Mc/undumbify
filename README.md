@@ -153,7 +153,11 @@ Restart Codex after installing the skill.
 
 This is an experimental draft, not a fully validated release. Testing and fixes are ongoing. The cases in [`evals/`](evals/) cover whether each mode preserves the request, asks useful questions, respects its stop limit, stays prompt-only and avoids unnecessary effort. The [evaluation protocol](evals/PROTOCOL.md) separates skill failures from simulator errors; test definitions are not claims that every case passes.
 
-The current draft prioritises existing success requirements, evidence of what is going wrong, and lower-friction clarification. See the [27 October update checks](evals/2026-10-27-practical-update/README.md) for the bounded comparison and its limitations. The [September checks](evals/2026-09-05-draft-checks.md) remain historical evidence. The larger original-intent evaluation is still incomplete. No overall pass rate or Low/Medium/High reliability claim is made.
+The current draft prioritises existing success requirements, evidence of what is going wrong, and lower-friction clarification. The [27 October update checks](evals/2026-10-27-practical-update/README.md) record the before/after behaviour and a regression caught before shipping.
+
+The [lower-effort follow-up](evals/2026-10-27-lower-effort/README.md) ran the same four cases at Astra Low, Medium and High, without changing the skill. All 12 conversations met the material checks, matching the four previous Ultra conversations. A separate AI reviewer assessed the outputs with effort labels hidden. No further runtime change was justified. This supports trying Low for bounded clarification of this kind; it does not establish general reliability or the effort needed to execute the resulting prompt.
+
+The [September checks](evals/2026-09-05-draft-checks.md) remain historical evidence. The larger original-intent evaluation is still incomplete. No overall pass rate or general Low/Medium/High reliability claim is made.
 
 Real prompts are even more useful. If a mode asks a useless question, misses an important gap, adds ceremony, recommends too much effort or changes what you asked for, please [open an issue](https://github.com/I-Cam-Mc/undumbify/issues). Test cases and improvement suggestions are welcome.
 

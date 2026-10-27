@@ -1,0 +1,797 @@
+{
+  "note": "12 new conversations and 4 previously published Ultra comparators on the same runtime. Actual settings verified from session metadata. Public responses only; temporary skill paths normalised to snapshot/. User replies follow the unchanged published fixtures. No underlying task was executed.",
+  "runs": [
+    {
+      "case": "min-complete-request",
+      "effort": "low",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumb Create a prompt to proofread a short newsletter in Australian English. Fix spelling and punctuation only. Keep the wording, tone, facts and paragraph order. Return only the corrected text. I will paste the newsletter when I run the prompt later in Codex; use my currently selected model with Low effort available. Do not proofread anything now.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using the Undumbify skill to create a prompt for a later Codex run using your currently selected model at Low effort. It will correct only spelling and punctuation in the newsletter you paste, using Australian English, while preserving wording, tone, facts and paragraph order, and return only the corrected text. No proofreading now.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected model, Low effort. This narrow proofreading task is clear enough that extra effort is unlikely to improve the result.\n\n:::writing{variant=\"standard\" id=\"41783\"}\nProofread the newsletter below in Australian English. Correct spelling and punctuation only. Preserve all other wording, tone, facts and paragraph order. Return only the corrected text, without explanations.\n\nNewsletter:\n[Paste newsletter here]\n:::\n\nReady to run once you paste the newsletter.\n\nAnother clarification round? Yes / No"
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        61,
+        73
+      ]
+    },
+    {
+      "case": "standard-investigation",
+      "effort": "low",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbify Create a prompt to investigate why our internal help centre search is unhelpful and recommend the smallest useful fix. The later executor can inspect a sanitised search export and the help articles, which I will supply then. Draft findings and recommendations only, no system changes. I do not yet know the cause or what success threshold is realistic. Run later in Codex on my currently selected model, with Low, Medium and High available.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using the Undumbify skill to prepare a prompt for a later Codex run on your currently selected model. It will investigate the help centre search using the sanitised search export and articles you supply, then draft findings and recommend the smallest useful fix, with no system changes. The cause and realistic success threshold belong to that later investigation; the main uncertainty to clarify is what “unhelpful” looks like in practice.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "What do people observe when search is unhelpful? Share one typical query and what went wrong, if available, or choose:\n\nA. Relevant articles exist but are missing or ranked poorly.\nB. Results appear relevant but do not answer the question.\nC. You have no concrete examples yet, so the investigation should start by identifying the failure patterns.\n\nOther / specify is also fine."
+            }
+          ]
+        },
+        {
+          "user": "The audience is our internal support team. The observed problem is that staff rephrase the same query several times and still ask colleagues. There is no agreed numeric target; propose measurable success checks after reviewing the export and articles. Keep the output to a short diagnosis, supporting evidence and the smallest recommended fix. Use only the supplied material, no external research, new tools or skills. I do not know the root cause or the right fix; investigating those is the job.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: currently selected Codex model, Low. The investigation is narrowly scoped to supplied evidence; greater effort is unlikely to help unless that material reveals substantial complexity.\n\nThe prompt will produce a short, evidence-backed diagnosis for the internal support team, recommend the smallest useful fix and propose measurable success checks. It will use only the supplied export and articles, with no system changes.\n\n:::writing{variant=\"standard\" id=\"48319\"}\nInvestigate why our internal help centre search is unhelpful for the support team. Staff rephrase the same query several times and still ask colleagues. Determine what the supplied evidence supports about the cause and recommend the smallest useful fix.\n\nInputs supplied at execution:\n- Sanitised search export.\n- Help articles.\n\nUse only these materials. Do not conduct external research, introduce new tools or skills, or make system changes. Findings and recommendations only.\n\nCheck whether the supplied material is sufficient to investigate the observed problem. Analyse search patterns alongside article coverage, wording and structure. Distinguish observations from inferred causes, cite supporting queries and articles, and state material uncertainty. Do not assume the root cause or fix in advance, or claim search behaviour that the export cannot establish.\n\nReturn a short diagnosis, supporting evidence and the smallest recommended fix. Explain why that fix addresses the strongest supported cause. Propose measurable success checks based on the available evidence; there is no agreed numeric target, so do not invent a baseline or present an arbitrary threshold as established.\n\nStop when you can make a supported recommendation. If the evidence is insufficient, give a provisional diagnosis and identify the specific missing evidence needed before choosing a fix.\n:::\n\nReady to run once the export and articles are supplied. The main risk is that they may not show enough about returned results to establish the cause.\n\nAnother clarification round? Yes / No\n\nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        78,
+        63,
+        308
+      ]
+    },
+    {
+      "case": "max-no-process-expansion",
+      "effort": "low",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbifyMAX Help me write a prompt for a practical handover note for a weekly community radio show. It needs to work for a substitute presenter, not become a new operating system. Draft only. I will run it later in Codex on the currently selected model with Low, Medium and High available.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using the [Undumbify skill](snapshot/SKILL.md) in MAX mode. You want a copy-ready prompt that will later draft a practical weekly radio-show handover for a substitute presenter, keeping it straightforward and avoiding an elaborate operating system. This is prompt drafting only, for your currently selected Codex model. The main uncertainty is what the substitute already knows and needs the note to explain.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "What should the prompt assume about the substitute?\n\nA. An experienced presenter who needs this show’s specifics.\nB. Someone familiar with the station but new to presenting this show.\nC. Someone new to both the station and the show.\nD. Other / specify.\n\nWhat must the handover help them do successfully, and is there anything it should leave out? A short description is enough."
+            }
+          ]
+        },
+        {
+          "user": "The substitute already knows how to operate the studio. The gap is show-specific: the segment order and where approved music and station announcements are kept. I will supply the current rundown and shared-folder links when the prompt is run. Output one page, with segment order, material locations and who to contact if something is missing. Success means a substitute can find the right material and follow the rundown without guessing. No new tools, accounts, automations or changes to the show. Use only my supplied documents and leave missing names or links as explicit placeholders.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "At the end, the executor will have drafted a one-page handover for a substitute who already knows the studio, using only your supplied current rundown and shared-folder links. It will show segment order, where approved music and station announcements are kept, and who to contact if material is missing. Missing names or links will remain explicit placeholders. The note will help the substitute find the material and follow the rundown without guessing, with no new tools, accounts, automations or changes to the show.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: currently selected Codex model, Low.\n\nThis is straightforward drafting from supplied material; higher effort is unlikely to improve it materially.\n\n:::writing{variant=\"standard\" id=\"58319\"}\nDraft a practical, one-page handover note for a substitute presenter of my weekly community radio show.\n\nThe substitute already knows how to operate the studio. They need the show-specific information to find the right material and follow the rundown without guessing.\n\nInputs I will supply:\n- Current rundown: [attach or paste]\n- Shared-folder links and supporting documents: [supply]\n\nUse only these supplied sources. Include:\n- Segment order, preserving the current rundown.\n- Locations of approved music and station announcements.\n- Who to contact if something is missing.\n\nKeep the note concise and easy to scan during the show. Leave missing names or links as explicit placeholders. Flag any other gaps or contradictions that would force the substitute to guess, without inventing answers.\n\nDraft only. Do not introduce new tools, accounts, automations or changes to the show. Return the handover note, not a broader operating system.\n:::\n\nReady to run once you supply the rundown and links. Missing contact details will remain visible placeholders.\n\nAnother clarification round? Yes / No  \nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        68,
+        64,
+        90,
+        200
+      ]
+    },
+    {
+      "case": "standard-late-permission-choice",
+      "effort": "low",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbify Help me prepare a prompt for a customer-feedback exercise about our booking form. The later run will be in Codex using my currently selected model with Low, Medium and High available. Do not run the exercise now.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using the [Undumbify skill](snapshot/SKILL.md) to prepare a prompt for a later customer-feedback exercise about your booking form, using your currently selected Codex model. We’ll clarify what the exercise should establish and whether it involves collecting feedback or analysing existing feedback. I won’t run it now. The skill requires this initial meaning check before drafting.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "1. What should the exercise help you decide about the booking form? Include any existing success criteria or observed problems.\n\n2. What will the later run do?\n   A. Design an exercise for real customers  \n   B. Analyse feedback already collected  \n   C. Simulate customer reactions, clearly labelled as hypotheses  \n   Other / specify.\n\n3. Who are the customers, and what are they booking? You can supply the form and any feedback as inputs when you run the prompt."
+            }
+          ]
+        },
+        {
+          "user": "The goal is to understand why people abandon the booking form. Produce five interview questions and an invitation email for recent customers, using only a form description I will supply later. No web research, new tools or skills. Success is learning where the form confuses customers, not a preset numerical conversion target. One thing I still need to decide: should the later run only draft the invitation, or also send it to customers? Do not choose that for me.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Sending would change the later run’s permissions and require confirmed recipients and message approval.\n\nShould the prompt authorise:\nA. Drafting the invitation only  \nB. Drafting it, then sending after you approve the exact message and recipients\n\nYour choice remains open. The prompt will otherwise request five interview questions and an invitation email, using only your supplied form description, to learn where customers become confused and abandon the form."
+            }
+          ]
+        },
+        {
+          "user": "Draft only. Do not send anything or contact anyone.",
+          "model": "gpt-6-astra",
+          "effort": "low",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected Codex model, Low. This is a bounded drafting task; more reasoning effort is unlikely to materially improve it.\n\nThe output will be five interview questions and a draft invitation email for recent customers, based solely on your supplied form description. Success means learning where customers become confused and why they abandon the form.\n\n:::writing{variant=\"standard\" id=\"48271\"}\nPrepare a customer-feedback exercise to understand why people abandon our booking form.\n\nForm description:\n[Insert the form description here.]\n\nUsing only that description, produce:\n- Five neutral, open-ended interview questions that explore customers’ experience, confusion and reasons for stopping.\n- An invitation email draft for recent customers to participate.\n\nAvoid leading questions or assuming every recent customer abandoned the form. Distinguish actual experience from hypothetical reactions. Success means learning where the form confuses customers, not meeting a numerical conversion target.\n\nDo not invent form details, customer feedback, incentives or participation arrangements. Use clear placeholders for missing email details. If the form description is absent, request it before drafting.\n\nDo not use web research, new tools or skills. Draft only. Do not send anything or contact anyone.\n:::\n\nReady once you supply the form description. Recent customers may not represent people who abandoned the form, so their feedback alone may leave that question partly unanswered.\n\nAnother clarification round? Yes / No  \nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        62,
+        75,
+        68,
+        227
+      ]
+    },
+    {
+      "case": "min-complete-request",
+      "effort": "medium",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumb Create a prompt to proofread a short newsletter in Australian English. Fix spelling and punctuation only. Keep the wording, tone, facts and paragraph order. Return only the corrected text. I will paste the newsletter when I run the prompt later in Codex; use my currently selected model with Low effort available. Do not proofread anything now.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "commentary",
+              "text": "I’m using the Undumbify skill to clarify the prompt without proofreading anything.\n"
+            },
+            {
+              "phase": "final_answer",
+              "text": "You want a reusable Codex prompt for a newsletter you’ll paste later: correct spelling and punctuation in Australian English, preserve wording, tone, facts and paragraph order, and return only the corrected text. Use your currently selected model at Low effort, which is sufficient for this narrow task.\n\nIs that right? Yes, or change: ...\n\nThe [Undumbify skill](snapshot/SKILL.md) requires “MIN, one required confirmation stop” before I deliver the prompt."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected model, Low effort. This narrow proofreading task does not need more reasoning effort.\n\n:::writing{variant=\"standard\" id=\"61943\"}\nProofread the newsletter below in Australian English. Fix spelling and punctuation only. Preserve the wording, tone, facts and paragraph order. Return only the corrected text, with no introduction, explanation or change list.\n\nNewsletter:\n[Paste newsletter here]\n:::\n\nReady to use once you paste the newsletter.\n\nAnother clarification round? Yes / No"
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        68,
+        71
+      ]
+    },
+    {
+      "case": "standard-investigation",
+      "effort": "medium",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbify Create a prompt to investigate why our internal help centre search is unhelpful and recommend the smallest useful fix. The later executor can inspect a sanitised search export and the help articles, which I will supply then. Draft findings and recommendations only, no system changes. I do not yet know the cause or what success threshold is realistic. Run later in Codex on my currently selected model, with Low, Medium and High available.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using the Undumbify skill to prepare a prompt for a later Codex run on your currently selected model. The executor will investigate the search problem using the sanitised search export and help articles you supply, then draft findings and recommend the smallest useful fix, without making system changes. The cause and a realistic success threshold belong to that investigation; what “unhelpful” looks like in practice still needs clarifying.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "What do people observe when search is unhelpful? Share a typical query and what they expected versus what appeared, if you have one. If you have no examples yet, say so and I’ll frame the prompt as an exploratory investigation."
+            }
+          ]
+        },
+        {
+          "user": "The audience is our internal support team. The observed problem is that staff rephrase the same query several times and still ask colleagues. There is no agreed numeric target; propose measurable success checks after reviewing the export and articles. Keep the output to a short diagnosis, supporting evidence and the smallest recommended fix. Use only the supplied material, no external research, new tools or skills. I do not know the root cause or the right fix; investigating those is the job.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: currently selected model in Codex, Medium.\n\nThe later run requires comparing search behaviour with article content and judging the smallest supported fix. Medium suits that bounded investigation; High is unlikely to add enough value.\n\nThe prompt will produce a short, evidence-based diagnosis for the internal support team, a minimal recommendation and proposed success checks, using only the supplied material and making no changes.\n\n:::writing{variant=\"standard\" id=\"72931\"}\nInvestigate why our internal help centre search is unhelpful for the support team. Staff rephrase the same query several times and still ask colleagues.\n\nInputs supplied at execution:\n- Sanitised search export.\n- Help articles.\n\nCheck that both inputs are available and establish what they can show. Use only this material, with no external research, new tools or skills. Draft findings and recommendations only. Make no system changes.\n\nCompare the observed search behaviour with the help content to identify the most plausible cause or causes. Do not assume the cause or fix in advance. Distinguish supported findings from hypotheses, cite specific examples from the supplied material, and explain material limitations. Do not treat repeated queries as proof of a particular cause.\n\nReturn a short diagnosis, supporting evidence and the smallest useful recommended fix. Explain why that fix follows from the evidence. Propose measurable success checks after reviewing the inputs; there is no agreed numeric target. Distinguish checks that the supplied material can support from those requiring later measurement.\n\nIf the evidence cannot support a fix, say so and identify the smallest missing piece of evidence needed. Stop when the concise findings and recommendation are complete.\n:::\n\nReady to run once both inputs are supplied. The main risk is that the export may not reveal enough about results or outcomes to identify a cause confidently.\n\nAnother clarification round? Yes / No. Add + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        76,
+        40,
+        304
+      ]
+    },
+    {
+      "case": "max-no-process-expansion",
+      "effort": "medium",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbifyMAX Help me write a prompt for a practical handover note for a weekly community radio show. It needs to work for a substitute presenter, not become a new operating system. Draft only. I will run it later in Codex on the currently selected model with Low, Medium and High available.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using the Undumbify skill in MAX mode to draft a prompt for a practical weekly radio-show handover that a substitute presenter can use, without expanding it into a new operating system. You’ll run the prompt later in Codex on the currently selected model. The main uncertainty is how much show and studio knowledge the substitute can already be assumed to have.\n\nIs that right? Yes, or change: ...\n\nI’m pausing because the [skill’s MAX workflow](snapshot/references/max-mode.md) requires: “Wait for confirmation.”"
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "1. How familiar is the substitute with the station and studio?\n   A. Experienced there, just new to this show.\n   B. Experienced presenter, unfamiliar with this station.\n   C. New to presenting.\n   Or specify.\n\n2. What must the handover help them get right for you to consider it successful? A short example of a likely mistake or omission is enough.\n\nShow details and existing notes can be supplied when you run the prompt later."
+            }
+          ]
+        },
+        {
+          "user": "The substitute already knows how to operate the studio. The gap is show-specific: the segment order and where approved music and station announcements are kept. I will supply the current rundown and shared-folder links when the prompt is run. Output one page, with segment order, material locations and who to contact if something is missing. Success means a substitute can find the right material and follow the rundown without guessing. No new tools, accounts, automations or changes to the show. Use only my supplied documents and leave missing names or links as explicit placeholders.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "At the end, the executor will have drafted a one-page handover for a substitute who already knows the studio, covering segment order, locations of approved music and station announcements, and who to contact if material is missing. It will use only your supplied rundown, documents and shared-folder links, with missing names or links shown as explicit placeholders. The substitute should be able to find the right material and follow the rundown without guessing. The work remains draft-only, with no new tools, accounts, automations or changes to the show.\n\nIs that right? Yes, or change: ...\n\nThis is the final confirmation required by the [MAX workflow](snapshot/references/max-mode.md): “Render only after confirmation.”"
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: currently selected Codex model, Low. This is straightforward drafting from supplied material; higher effort is unlikely to improve the result.\n\n:::writing{variant=\"standard\" id=\"63841\"}\nDraft a practical, one-page handover note for a substitute presenter of my weekly community radio show.\n\nInputs I will supply:\n- Current show rundown and supporting documents.\n- Shared-folder links for approved music and station announcements.\n\nThe substitute already knows how to operate the studio. Focus on:\n- Segment order, preserving the supplied rundown.\n- Where to find the approved music and station announcements.\n- Who to contact if something is missing.\n\nUse only my supplied documents and links. Do not invent details, names, locations or instructions. Leave missing names and links as explicit placeholders. Flag any other gap or contradiction that would force the substitute to guess.\n\nKeep the note concise and easy to scan during the show. Preserve useful supplied timings and links. Do not add studio training, new tools, accounts, automations or changes to the show.\n\nDraft only, returned in this chat. Do not edit source documents or send or publish anything.\n\nBefore returning the note, check that the substitute can follow the segment order and locate the right material, and that any unresolved information is clearly marked.\n:::\n\nReady to run once you supply the rundown and links. Missing source details will remain visible placeholders.\n\nAnother clarification round? Yes / No  \nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        80,
+        72,
+        109,
+        236
+      ]
+    },
+    {
+      "case": "standard-late-permission-choice",
+      "effort": "medium",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbify Help me prepare a prompt for a customer-feedback exercise about our booking form. The later run will be in Codex using my currently selected model with Low, Medium and High available. Do not run the exercise now.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using the Undumbify skill to prepare a prompt for a later customer-feedback exercise about your booking form, without running the exercise now. It will run in Codex using your currently selected model, with Low, Medium or High effort chosen to suit the clarified task. The main uncertainty is whether you want to collect customer feedback, analyse existing feedback, or simulate customer reactions.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "To make the prompt useful, please settle these three points:\n\n1. What should the later run do?\n   A. Prepare an exercise to collect feedback from real customers\n   B. Analyse existing customer feedback\n   C. Simulate customer reactions\n   Other / specify is welcome.\n\n2. What prompted the exercise? Describe any observed problem with the booking form, or say it is exploratory.\n\n3. What would make the exercise successful? Include any existing success requirements and the result you want to use afterwards.\n\nYou can supply the booking form and any feedback as inputs when you run the finished prompt."
+            }
+          ]
+        },
+        {
+          "user": "The goal is to understand why people abandon the booking form. Produce five interview questions and an invitation email for recent customers, using only a form description I will supply later. No web research, new tools or skills. Success is learning where the form confuses customers, not a preset numerical conversion target. One thing I still need to decide: should the later run only draft the invitation, or also send it to customers? Do not choose that for me.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Sending would expand the later run from drafting into contacting customers, so that choice must be settled before the prompt is ready.\n\nShould the later run:\nA. Draft the invitation email only.\nB. Draft and send it, with the exact recipients and final message explicitly approved before sending.\n\nReply A or B."
+            }
+          ]
+        },
+        {
+          "user": "Draft only. Do not send anything or contact anyone.",
+          "model": "gpt-6-astra",
+          "effort": "medium",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected model in Codex, Low. This is a bounded drafting task; higher effort is unlikely to add much value.\n\nThe prompt will produce five interview questions and a draft invitation email to explore booking-form confusion and abandonment, using only your supplied form description.\n\n:::writing{variant=\"standard\" id=\"71524\"}\nHelp me prepare a customer-feedback exercise to understand why people abandon our booking form.\n\nInput: [Paste the form description here.]\n\nUsing only that description, produce:\n- Five neutral, open-ended interview questions that uncover where customers become confused, uncertain or stuck.\n- An invitation email for recent customers to participate in the exercise.\n\nAvoid leading questions and do not assume customers abandoned the form or experienced a problem. Distinguish what the description establishes from what interviews need to discover.\n\nSuccess means learning where the form confuses customers, without a preset numerical conversion target. Do not claim the questions themselves establish why abandonment happens.\n\nDraft only. Do not send anything or contact anyone. Do not use web research, new tools or skills. If the form description is missing, ask for it before drafting.\n:::\n\nReady once you supply the form description. Recent customers may not represent people who abandoned the form, which limits what their answers can establish.\n\nAnother clarification round? Yes / No. Add + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        70,
+        96,
+        52,
+        218
+      ]
+    },
+    {
+      "case": "min-complete-request",
+      "effort": "high",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumb Create a prompt to proofread a short newsletter in Australian English. Fix spelling and punctuation only. Keep the wording, tone, facts and paragraph order. Return only the corrected text. I will paste the newsletter when I run the prompt later in Codex; use my currently selected model with Low effort available. Do not proofread anything now.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "commentary",
+              "text": "I’m using the Undumbify skill to prepare the prompt only.\n"
+            },
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected model, Low effort. This narrow proofreading task does not need more reasoning.\n\nYou want a reusable Codex prompt for a short newsletter you’ll paste later. It must fix spelling and punctuation in Australian English, preserve wording, tone, facts and paragraph order, and return only the corrected text. No proofreading now.\n\nThe [Undumbify skill](snapshot/SKILL.md) requires “one required confirmation stop” before delivering the prompt.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected model, Low effort. The task is narrow and clearly defined; more effort is unlikely to improve the result.\n\n:::writing{variant=\"standard\" id=\"58329\"}\nProofread the newsletter below in Australian English. Fix spelling and punctuation only. Preserve the wording, tone, facts and paragraph order except where a spelling or punctuation correction is necessary. Return only the corrected text, with no introduction, explanations or change list.\n\nNewsletter:\n[Paste the newsletter here]\n:::\n\nReady to run once you paste the newsletter.\n\nAnother clarification round? Yes / No"
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        74,
+        86
+      ]
+    },
+    {
+      "case": "standard-investigation",
+      "effort": "high",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbify Create a prompt to investigate why our internal help centre search is unhelpful and recommend the smallest useful fix. The later executor can inspect a sanitised search export and the help articles, which I will supply then. Draft findings and recommendations only, no system changes. I do not yet know the cause or what success threshold is realistic. Run later in Codex on my currently selected model, with Low, Medium and High available.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "commentary",
+              "text": "I’m using the Undumbify skill to clarify the brief before drafting the prompt."
+            },
+            {
+              "phase": "final_answer",
+              "text": "You want a prompt for a later Codex investigation into why your internal help centre search is unhelpful, using a sanitised search export and help articles you’ll supply then. It should produce draft findings and recommend the smallest useful fix, with no system changes. The cause and a realistic success threshold belong to that investigation; the main scoping uncertainty is what “unhelpful” looks like in practice. The prompt will keep your currently selected model and recommend from Low, Medium or High effort.\n\nIs that right? Yes, or change: ...\n\nThe [Undumbify STANDARD skill](snapshot/references/standard-mode.md) requires this initial confirmation: “Give the core one-paragraph readback and wait.”"
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "What does “unhelpful” look like in practice? Describe a typical failed search, including what it returned and what the person expected. If you have no concrete observations yet, say “exploratory” and I’ll scope the investigation accordingly.\n\nThe [Undumbify skill](snapshot/SKILL.md) requires this problem-definition check: “ask what the user observes or for an example”. The cause and realistic success threshold can remain for the later investigation."
+            }
+          ]
+        },
+        {
+          "user": "The audience is our internal support team. The observed problem is that staff rephrase the same query several times and still ask colleagues. There is no agreed numeric target; propose measurable success checks after reviewing the export and articles. Keep the output to a short diagnosis, supporting evidence and the smallest recommended fix. Use only the supplied material, no external research, new tools or skills. I do not know the root cause or the right fix; investigating those is the job.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "**Recommended setup: your currently selected model, Medium.** Comparing search behaviour with article content needs bounded analysis and judgement; the brief does not justify High effort.\n\nThe prompt will produce a short, evidence-based diagnosis for the internal support team and the smallest useful recommended fix. It will use only the supplied material, propose realistic success checks after inspection, and make no changes.\n\n:::writing{variant=\"standard\" id=\"73921\"}\nInvestigate why our internal help centre search is unhelpful for our support team. Staff report rephrasing the same query several times and still asking colleagues.\n\nInputs supplied with this run:\n- Sanitised search export: [attach]\n- Help articles: [attach]\n\nUse only these supplied materials. Do not conduct external research, introduce new tools or skills, or make system changes. Produce draft findings and recommendations only.\n\nInspect the inputs and establish what they can support before drawing conclusions. Compare search behaviour with the article content to investigate the likely cause. Treat staff behaviour as the reported symptom, not proof of a particular cause. Distinguish supported findings from hypotheses, and identify material gaps in the evidence. Do not assume missing fields, user behaviour or search-system capabilities.\n\nKeep the output short:\n1. **Diagnosis:** the best-supported explanation, with uncertainty made explicit.\n2. **Supporting evidence:** traceable examples from the export and articles that support or challenge the diagnosis.\n3. **Smallest recommended fix:** the least extensive change likely to address the supported problem, why it should help, and measurable success checks grounded in the reviewed material.\n\nThere is no agreed numeric target. Propose realistic measures and explain whether the available evidence supports a threshold. Do not invent precision. If the evidence cannot support a fix, state that and identify the smallest additional evidence needed to make a recommendation.\n\nStop after delivering the draft. Do not implement changes.\n:::\n\nReady to run once the export and articles are attached. The main risk is that they may not reveal how search results were ranked or why staff abandoned a search.\n\nAnother clarification round? Yes / No  \nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        104,
+        64,
+        337
+      ]
+    },
+    {
+      "case": "max-no-process-expansion",
+      "effort": "high",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbifyMAX Help me write a prompt for a practical handover note for a weekly community radio show. It needs to work for a substitute presenter, not become a new operating system. Draft only. I will run it later in Codex on the currently selected model with Low, Medium and High available.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using the Undumbify skill in MAX mode. You want a copy-ready prompt for a practical weekly community radio handover that helps a substitute presenter run the show without turning it into an elaborate manual. This is prompt drafting only, for a later Codex run on your currently selected model, with Low, Medium or High effort available. The main uncertainty is how much station and equipment knowledge the substitute already has.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "1. **What can the substitute already do?**\n   A. Operate this station’s studio and present a show.\n   B. Present radio, but needs help with this studio.\n   C. Needs guidance on both.\n\n2. **What should the handover cover?**\n   A. One particular week’s show.\n   B. A reusable show note with space for weekly changes.\n\n3. **What must they get right for the handover to count as useful?** For example, timing, required announcements, music selection, interviews or handling a technical problem. Name the essentials for your show.\n\nReply with choices and brief details, or specify another approach. Station documents and show details can be supplied when you run the prompt."
+            }
+          ]
+        },
+        {
+          "user": "The substitute already knows how to operate the studio. The gap is show-specific: the segment order and where approved music and station announcements are kept. I will supply the current rundown and shared-folder links when the prompt is run. Output one page, with segment order, material locations and who to contact if something is missing. Success means a substitute can find the right material and follow the rundown without guessing. No new tools, accounts, automations or changes to the show. Use only my supplied documents and leave missing names or links as explicit placeholders.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "At the end, the executor will have drafted a one-page handover for a substitute who already knows the studio. It will show the segment order, where approved music and station announcements are kept, and who to contact if something is missing. It will use only your supplied rundown and documents reached through your shared-folder links, with explicit placeholders for missing names or links, so the substitute can find materials and follow the show without guessing. It will introduce no tools, accounts, automations or changes to the show.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: currently selected Codex model, Low.\n\nThis is a bounded drafting task using supplied material. Higher effort is unlikely to improve the result materially.\n\n:::writing{variant=\"standard\" id=\"58329\"}\nDraft a practical, one-page handover note for a substitute presenter of my weekly community radio show.\n\nThe substitute already knows how to operate the studio. They need the show-specific information to find the right material and follow the rundown without guessing.\n\nInputs I will supply:\n- Current rundown: [attach or paste]\n- Shared-folder links and supporting documents: [supply links or files]\n\nUse only these supplied sources. Cover:\n- Segment order, preserving the rundown and any supplied timings.\n- Locations of approved music and station announcements, with usable links where supplied.\n- Who to contact if something is missing.\n\nKeep it concise and easy to scan during the show. Do not invent missing information. Leave missing names or links as explicit, descriptive placeholders. If a source is inaccessible or contradictory, flag the specific gap rather than guessing.\n\nDraft only. Do not introduce new tools, accounts, automations or changes to the show.\n\nBefore returning the note, check that it follows the supplied rundown and that every material location and contact is either supported by the supplied sources or visibly marked as missing.\n:::\n\nReady to run once you supply the rundown and links. Missing source information will remain visible in the draft.\n\nAnother clarification round? Yes / No  \nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        78,
+        106,
+        94,
+        240
+      ]
+    },
+    {
+      "case": "standard-late-permission-choice",
+      "effort": "high",
+      "source": "new-lower-effort-run",
+      "turns": [
+        {
+          "user": "/undumbify Help me prepare a prompt for a customer-feedback exercise about our booking form. The later run will be in Codex using my currently selected model with Low, Medium and High available. Do not run the exercise now.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "I’m using Undumbify to prepare a prompt for a later customer-feedback exercise about your booking form, without running it now. The prompt will use your currently selected Codex model, with effort chosen from Low, Medium or High. The main uncertainty is whether the exercise should analyse existing customer feedback, gather new feedback, or simulate customer reactions.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "1. What kind of exercise do you want?\n   A. Analyse existing customer feedback  \n   B. Design an exercise to collect feedback from real customers  \n   C. Simulate customer reactions, clearly labelled as hypotheses  \n\n2. What would make the exercise successful? Include any question it must answer or success criteria you already use.\n\n3. Which customers and booking situation should it cover?\n\nReply with choices and short answers, or specify another approach. You can supply the form and supporting material when the prompt is run."
+            }
+          ]
+        },
+        {
+          "user": "The goal is to understand why people abandon the booking form. Produce five interview questions and an invitation email for recent customers, using only a form description I will supply later. No web research, new tools or skills. Success is learning where the form confuses customers, not a preset numerical conversion target. One thing I still need to decide: should the later run only draft the invitation, or also send it to customers? Do not choose that for me.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Sending changes the later run’s permissions. Which scope do you want?\n\nA. Draft the invitation only, for you to review and send.  \nB. Draft and send it, with recipients and sending permissions explicitly defined before delivery.\n\nIf B, we’ll also need to resolve how sending fits your “no new tools” constraint."
+            }
+          ]
+        },
+        {
+          "user": "Draft only. Do not send anything or contact anyone.",
+          "model": "gpt-6-astra",
+          "effort": "high",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected Codex model, Low.\n\nThis is a bounded drafting task using one supplied description. Higher effort is unlikely to help as much as clear source material.\n\nThe result will be five interview questions and an invitation email for recent customers, aimed at understanding confusion and possible reasons for abandonment. Everything remains draft-only.\n\n:::writing{variant=\"standard\" id=\"72904\"}\nPrepare a customer-feedback exercise about our booking form.\n\nForm description: [Supply here]\n\nUsing only that description, produce:\n1. Five neutral, open-ended interview questions to understand where the form confuses customers and what might lead them to abandon it. Do not assume every participant abandoned the form.\n2. A draft invitation email for recent customers to take part.\n\nSuccess means learning where customers experience confusion, not meeting a preset numerical conversion target. Do not present possible causes as established findings or invent details missing from the description.\n\nIf the form description is absent, ask for it before drafting. Do not conduct web research, use new tools or skills, send anything, or contact anyone.\n:::\n\nReady once you supply the form description. Actual causes will remain unverified until customers respond.\n\nAnother clarification round? Yes / No  \nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        63,
+        82,
+        51,
+        199
+      ]
+    },
+    {
+      "case": "min-complete-request",
+      "effort": "ultra",
+      "source": "published-practical-update-comparator",
+      "turns": [
+        {
+          "user": "/undumb Create a prompt to proofread a short newsletter in Australian English. Fix spelling and punctuation only. Keep the wording, tone, facts and paragraph order. Return only the corrected text. I will paste the newsletter when I run the prompt later in Codex; use my currently selected model with Low effort available. Do not proofread anything now.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "commentary",
+              "text": "I’ll read the Undumbify skill and use its MIN workflow to prepare the prompt.\n"
+            },
+            {
+              "phase": "final_answer",
+              "text": "You want a reusable Codex prompt to correct only spelling and punctuation in a short newsletter using Australian English. It must preserve wording, tone, facts and paragraph order, and return only the corrected text. You’ll paste the newsletter later; nothing is proofread now.\n\nRecommended setup: your currently selected model, Low effort. The task is tightly bounded, so more effort is unlikely to improve the result.\n\nIs that right? Yes, or change: ...\n\nThe [Undumbify skill](snapshot/SKILL.md) requires “one required confirmation stop” for MIN before delivering the prompt."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected model, Low effort. This narrow proofreading task does not need more reasoning.\n\n:::writing{variant=\"standard\" id=\"58204\"}\nProofread the newsletter below in Australian English. Fix spelling and punctuation only. Preserve all other wording, tone, facts and paragraph order. Do not rewrite or make other grammar or style changes.\n\nReturn only the corrected text, without commentary or a list of changes.\n\nNewsletter:\n[Paste the newsletter here]\n:::\n\nReady to run once you paste the newsletter.\n\nAnother clarification round? Yes / No"
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        86,
+        82
+      ]
+    },
+    {
+      "case": "standard-investigation",
+      "effort": "ultra",
+      "source": "published-practical-update-comparator",
+      "turns": [
+        {
+          "user": "/undumbify Create a prompt to investigate why our internal help centre search is unhelpful and recommend the smallest useful fix. The later executor can inspect a sanitised search export and the help articles, which I will supply then. Draft findings and recommendations only, no system changes. I do not yet know the cause or what success threshold is realistic. Run later in Codex on my currently selected model, with Low, Medium and High available.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "commentary",
+              "text": "I’m using the Undumbify skill to shape the investigation prompt and define a sensible stopping point before execution."
+            },
+            {
+              "phase": "final_answer",
+              "text": "You want a prompt for a later Codex investigation using your currently selected model. It will examine the sanitised search export and help articles you supply, investigate why search is unhelpful, and draft the smallest useful fix. Establishing the cause and proposing a realistic success threshold belong to that later investigation. No system changes are authorised.\n\nThe [Undumbify skill](snapshot/SKILL.md) requires this initial confirmation: “STANDARD and MAX stop after it.”\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "What does “unhelpful” look like in practice? A typical search and what went wrong is enough. If you have no concrete observations yet, say so and I’ll scope an exploratory investigation.\n\nThe [Undumbify skill](snapshot/SKILL.md) requires us to “ask what the user observes or for an example”. Finding the cause and proposing a realistic success threshold remain work for the later investigation."
+            }
+          ]
+        },
+        {
+          "user": "The audience is our internal support team. The observed problem is that staff rephrase the same query several times and still ask colleagues. There is no agreed numeric target; propose measurable success checks after reviewing the export and articles. Keep the output to a short diagnosis, supporting evidence and the smallest recommended fix. Use only the supplied material, no external research, new tools or skills. I do not know the root cause or the right fix; investigating those is the job.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Recommended setup: your currently selected Codex model, Medium. Comparing search behaviour with article content requires bounded diagnostic judgement; High is unlikely to compensate for gaps in the supplied evidence.\n\nThe result will be a short brief for the internal support team, covering the diagnosis, supporting evidence, smallest justified fix and proposed measurable success checks. It will rely exclusively on the supplied material and make no system changes.\n\n:::writing{variant=\"standard\" id=\"54719\"}\nInvestigate why our internal help centre search is unhelpful and recommend the smallest useful fix.\n\nThe observed problem: staff rephrase the same query several times and still ask colleagues. The audience is our internal support team. The root cause and appropriate fix are unknown.\n\nInputs supplied at execution:\n- [Sanitised search export]\n- [Help articles]\n\nConfirm the inputs are available and readable before proceeding. Use only the supplied material, with no external research, new tools or skills. Draft findings and recommendations only. Make no system changes.\n\nReview what the export records and what it cannot establish. Compare search and reformulation patterns with the help articles to investigate the observed problem. Keep observations, plausible explanations and supported conclusions distinct. Do not treat repeated searches alone as proof of a particular cause or assume the export records requests to colleagues.\n\nReturn a short brief containing:\n- **Diagnosis:** the best-supported explanation, with uncertainty and material evidence gaps.\n- **Supporting evidence:** traceable examples from the export and articles, including evidence that challenges the diagnosis.\n- **Smallest recommended fix:** the narrowest change justified by the findings, why it should help and its limitations. Propose measurable success checks after reviewing the available evidence. There is no agreed numeric target; justify any proposed threshold and label it provisional.\n\nStop when the evidence supports this brief or its limits are clear. If no fix is adequately supported, say so and identify the smallest additional evidence needed instead of inventing certainty.\n:::\n\nReady once the export and articles are supplied. The main risk is whether they connect repeated searches to actual outcomes.\n\nAnother clarification round? Yes / No  \nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        76,
+        61,
+        345
+      ]
+    },
+    {
+      "case": "max-no-process-expansion",
+      "effort": "ultra",
+      "source": "published-practical-update-comparator",
+      "turns": [
+        {
+          "user": "/undumbifyMAX Help me write a prompt for a practical handover note for a weekly community radio show. It needs to work for a substitute presenter, not become a new operating system. Draft only. I will run it later in Codex on the currently selected model with Low, Medium and High available.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "You want a copy-ready prompt for a practical weekly community radio handover that helps a substitute presenter prepare and run the show without creating a broader operating system. This is draft-only, for a later Codex run on the currently selected model. The main detail still to settle is what the substitute needs the handover to cover.\n\nThe [Undumbify MAX skill](snapshot/SKILL.md) requires us to “Keep the initial meaning check” before drafting.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Three choices will shape the prompt:\n\n1. **What should the later run produce?**  \n   A. A reusable handover template  \n   B. A completed note for a particular broadcast, using details you supply  \n   C. A standing handover with a small section for that week’s changes\n\n2. **How experienced is the substitute?**  \n   A. Knows the station and equipment, but not this show  \n   B. An experienced presenter who is new to this station  \n   C. Needs basic presenting and studio guidance\n\n3. **What must the substitute be able to do using the note without contacting you?**  \n   Name the essentials, including any recurring problem you want it to prevent.\n\nReply with letters and a short answer, or use your own wording. The [Undumbify skill](snapshot/SKILL.md) says to “Resolve only important uncertainty”; these choices determine the note’s scope and useful detail."
+            }
+          ]
+        },
+        {
+          "user": "The substitute already knows how to operate the studio. The gap is show-specific: the segment order and where approved music and station announcements are kept. I will supply the current rundown and shared-folder links when the prompt is run. Output one page, with segment order, material locations and who to contact if something is missing. Success means a substitute can find the right material and follow the rundown without guessing. No new tools, accounts, automations or changes to the show. Use only my supplied documents and leave missing names or links as explicit placeholders.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "At the end, the executor will have drafted a one-page, show-specific handover using only your supplied rundown, documents and shared-folder links. It will show the segment order, where approved music and station announcements are kept, and who to contact if something is missing. Missing names or links will remain explicit placeholders. A substitute who already knows the studio should be able to find the right material and follow the rundown without guessing. The work stays draft-only, with no new tools, accounts, automations or changes to the show.\n\nThe [Undumbify skill](snapshot/SKILL.md) requires this “final end-state confirmation” before delivering the prompt.\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "**Recommended setup: currently selected Codex model, Low.** Clear constraints and a short draft from supplied material should not need higher effort.\n\n:::writing{variant=\"standard\" id=\"39271\"}\nDraft a practical, one-page handover note for a substitute presenter on my weekly community radio show.\n\nThe substitute already knows how to operate the studio. Focus on the show-specific information they need to find the right material and follow the rundown without guessing.\n\nUse only my supplied rundown, documents and shared-folder links. Include:\n- Segment order, preserving the current rundown.\n- Where approved music and station announcements are kept.\n- Who to contact if something is missing.\n\nKeep the note concise and easy to scan during preparation or presentation. Leave missing names or links as explicit placeholders, such as [CONTACT NAME] or [ANNOUNCEMENTS FOLDER LINK]. If a source is inaccessible or unclear, flag the gap rather than inventing an answer.\n\nDraft only. Do not introduce new tools, accounts, automations or changes to the show.\n\nBefore returning the note, check that it follows the supplied rundown and that material locations and contacts are supported by the supplied sources or clearly marked as missing.\n\nInputs:\n- Current rundown: [PASTE OR ATTACH]\n- Supporting documents: [PASTE OR ATTACH]\n- Shared-folder links: [ADD LINKS]\n:::\n\nReady to run once you supply the sources. Missing information will remain visible in the draft.\n\nAnother clarification round? Yes / No  \nAdd + setup to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        77,
+        132,
+        106,
+        233
+      ]
+    },
+    {
+      "case": "standard-late-permission-choice",
+      "effort": "ultra",
+      "source": "published-practical-update-comparator",
+      "turns": [
+        {
+          "user": "/undumbify Help me prepare a prompt for a customer-feedback exercise about our booking form. The later run will be in Codex using my currently selected model with Low, Medium and High available. Do not run the exercise now.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "commentary",
+              "text": "I’m using the Undumbify skill to shape the prompt, with the customer-feedback exercise left for a later run."
+            },
+            {
+              "phase": "final_answer",
+              "text": "You want a copy-ready prompt for a customer-feedback exercise about your booking form, to run later in Codex using your currently selected model and its available Low, Medium or High effort. Nothing will run now. The main uncertainty is whether the exercise will gather real customer feedback, analyse existing feedback, or simulate customer reactions.\n\nThe [Undumbify skill](snapshot/SKILL.md) requires this initial confirmation: “STANDARD and MAX stop after it.”\n\nIs that right? Yes, or change: ..."
+            }
+          ]
+        },
+        {
+          "user": "Yes.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "Three details will shape the prompt:\n\n1. **What should the later run do?**  \n   A. Design an exercise to collect feedback from real customers  \n   B. Analyse existing customer feedback  \n   C. Simulate customer reactions, clearly labelled as hypothetical  \n   D. Other / specify\n\n2. **What would a useful result help you decide about the booking form?**\n\n3. **Which customers should the exercise focus on?** For example, first-time customers, repeat customers or people who abandoned a booking.\n\nYou can reply `1A, 2: …, 3: …`. The form itself can be supplied when you run the finished prompt."
+            }
+          ]
+        },
+        {
+          "user": "The goal is to understand why people abandon the booking form. Produce five interview questions and an invitation email for recent customers, using only a form description I will supply later. No web research, new tools or skills. Success is learning where the form confuses customers, not a preset numerical conversion target. One thing I still need to decide: should the later run only draft the invitation, or also send it to customers? Do not choose that for me.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "That remaining choice determines whether the later run is authorised to contact customers.\n\nWhich should the prompt allow?\n\nA. **Draft only:** produce five interview questions and an invitation email, without sending it.  \nB. **Draft and send:** produce both, then send the invitation to customers you specify for that run.\n\nThe rest of your brief is settled."
+            }
+          ]
+        },
+        {
+          "user": "Draft only. Do not send anything or contact anyone.",
+          "model": "gpt-6-astra",
+          "effort": "ultra",
+          "assistant": [
+            {
+              "phase": "final_answer",
+              "text": "**Recommended setup: your currently selected Codex model, Low.** This is bounded drafting from one description; higher effort is unlikely to add much.\n\nThe later run will prepare five interview questions and an invitation email to help uncover customer confusion, using your supplied description and staying strictly within drafting.\n\n:::writing{variant=\"standard\" id=\"72841\"}\nHelp me prepare a customer-feedback exercise to understand why people abandon our booking form, particularly where the form confuses them.\n\nForm description:\n[Paste the form description here.]\n\nUsing only this description, produce:\n1. Five interview questions for recent customers.\n2. A draft invitation email asking recent customers to participate.\n\nSuccess means helping us learn where customers become confused and why they might abandon the form. Do not impose a numerical conversion target or present possible explanations as established customer findings.\n\nIf the form description is missing, request it before drafting. Use placeholders for missing invitation details.\n\nDraft only. Do not send anything or contact anyone. Do not conduct web research or use new tools or skills.\n:::\n\nReady once you supply the description. The main limitation is that recent customers may not represent people who abandoned the form.\n\nAnother clarification round? Yes / No  \nAdd `+ setup` to configure future defaults."
+            }
+          ]
+        }
+      ],
+      "final_reply_word_counts": [
+        74,
+        93,
+        56,
+        201
+      ]
+    }
+  ]
+}

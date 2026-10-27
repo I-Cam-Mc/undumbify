@@ -2,6 +2,12 @@
 
 Material upgrades to Undumbify are recorded here so users can see what changed, why it changed, and which behaviour deserves renewed testing.
 
+## 2026-10-27: lower-effort verification
+
+Published [12 additional conversations](evals/2026-10-27-lower-effort/README.md): the same four targeted cases at Astra Low, Medium and High, on the unchanged practical update. Actual settings were verified for every turn. All four cases met the material checks at each effort, matching the previous Ultra runs. An independent AI review with effort labels hidden found no material omissions, added requirements or permission expansion.
+
+This is a report-only update. No runtime instructions changed, and no failed result was replaced by a retry. The evidence supports Low as a starting point for these bounded clarification tasks, not a universal recommendation. Each case has only one observation per effort; the familiar scripted cases do not measure hidden-intent recovery, real-user satisfaction or downstream task quality. Testing remains ongoing and the draft warning stays in place.
+
 ## 2026-10-27: practical clarification upgrade
 
 Still a draft with bugs and ongoing testing. This update targets interaction burden, not a claim of proven reliability at lower reasoning effort.

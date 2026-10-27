@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-27",
+  "skill_commit": "5d016c666ffeecd70597c825cf4ec107cd6d34e9",
+  "model": "gpt-6-astra",
+  "efforts": ["low", "medium", "high"],
+  "case_ids": ["min-complete-request", "standard-investigation", "max-no-process-expansion", "standard-late-permission-choice"],
+  "planned_conversations": 12,
+  "fixtures": "Unchanged requests, scripted replies, expectations and caps from evals/2026-10-27-practical-update/cases.json and followup-case.json at the skill commit.",
+  "protocol": [
+    "Fresh isolated subject for every case and effort; explicit model and effort configured at spawn and verified from session metadata.",
+    "Subject sees only the frozen skill snapshot, linked references, request and scripted subsequent replies, not expected answers, rubric or earlier results.",
+    "Send fixed replies at the corresponding stops. Stop on prompt delivery or the fixture cap. Do not inject unused answers after delivery or add rescue turns.",
+    "The follow-up case sends the final draft-only answer only after the actual draft/send question. If permission to ask is requested first, allow the fixture's single Yes.",
+    "Keep runtime instructions and cases unchanged for the complete batch. No rerunning poor outcomes in place.",
+    "Record public responses and tool-call inventory, actual configurations, preservation, unsupported additions, delivery and interaction burden.",
+    "Compare with the four candidate-2 Ultra runs from the published report. This is one observation per case/effort, not a reliable model ranking.",
+    "Complete an independent semantic review before reporting. Retain disagreements rather than counting word matching as correctness.",
+    "Do not execute any underlying task. These fixed full-brief replies do not measure hidden-intent elicitation or downstream task quality."
+  ]
+}

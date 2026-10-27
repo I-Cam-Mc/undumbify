@@ -1,0 +1,18 @@
+{
+  "skill_commit": "5d016c666ffeecd70597c825cf4ec107cd6d34e9",
+  "plan_sha256": "d756c272f79f5cabcac8c8e3df101cf89cab3d86a68e19610f3c01cd96c11cc0",
+  "fixtures": {
+    "cases_json": "40a51165b85839359675786aea9eefeed815e2d2ff2bcb083f3f8bbc3b5dd841",
+    "followup_case_json": "ddb161224e09a96a395f125493af9edd46973c4d27363b47f0d8dc1e53422a2a"
+  },
+  "runtime_files": {
+    "SKILL.md": "1d3d09cc24210ad5c0c7827525d3f6a78adf0830707e741525619e071c054466",
+    "references/human-reality.md": "b600d55cc068a3670d0dd0b0935378960a99f342d53eda2b23852ac090eaa654",
+    "references/max-mode.md": "e7ebccdbe597924588c3eb74971c67157a5cbf6da30afacf71b2467fd97688d0",
+    "references/model-routing.md": "1943644eacfe57b4d67654be0bcdd74a9cac017767cc10e5edd213519f3d1174",
+    "references/setup.md": "d4486ebf97deb4312bdde293259d00ac5e87b4c614d7f3826993e09406d13126",
+    "references/skill-discovery.md": "f35e8db581bc64de0907385571201e271d2347de063084df55ce49b41b9c3667",
+    "references/standard-mode.md": "e1bedd3178f35af1407c765c379f995b23e4b9c65eec059749f34c139510fa43",
+    "references/unlazy-handoff.md": "9b12fc53ecdf76b5c745d1ca24e14ae2e25575cffc7c2f3469b9aa5189ae909b"
+  }
+}

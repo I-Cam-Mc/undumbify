@@ -1,0 +1,101 @@
+{
+  "method": "An independent fresh reviewer received the 16 conversations in shuffled order with actual model/effort, version and source metadata removed. It saw the original requests, scripted answers, user-facing final-channel responses and the material criteria. It was instructed to read only that review file. The primary agent independently reviewed the outputs and agrees with the material assessment.",
+  "labels": {
+    "R01": {
+      "case": "min-complete-request",
+      "effort": "low"
+    },
+    "R02": {
+      "case": "standard-late-permission-choice",
+      "effort": "high"
+    },
+    "R03": {
+      "case": "standard-late-permission-choice",
+      "effort": "low"
+    },
+    "R04": {
+      "case": "min-complete-request",
+      "effort": "medium"
+    },
+    "R05": {
+      "case": "standard-late-permission-choice",
+      "effort": "medium"
+    },
+    "R06": {
+      "case": "max-no-process-expansion",
+      "effort": "ultra"
+    },
+    "R07": {
+      "case": "standard-investigation",
+      "effort": "high"
+    },
+    "R08": {
+      "case": "standard-investigation",
+      "effort": "medium"
+    },
+    "R09": {
+      "case": "max-no-process-expansion",
+      "effort": "high"
+    },
+    "R10": {
+      "case": "standard-investigation",
+      "effort": "ultra"
+    },
+    "R11": {
+      "case": "min-complete-request",
+      "effort": "high"
+    },
+    "R12": {
+      "case": "max-no-process-expansion",
+      "effort": "medium"
+    },
+    "R13": {
+      "case": "standard-late-permission-choice",
+      "effort": "ultra"
+    },
+    "R14": {
+      "case": "standard-investigation",
+      "effort": "low"
+    },
+    "R15": {
+      "case": "max-no-process-expansion",
+      "effort": "low"
+    },
+    "R16": {
+      "case": "min-complete-request",
+      "effort": "ultra"
+    }
+  },
+  "verdict": "All 16 conversations materially pass against their supplied requests and answers. This includes 12 new lower-effort conversations and four existing Ultra comparators, not 16 new tests.",
+  "rationale": "Newsletter prompts preserve spelling/punctuation-only scope. Search prompts clarify symptoms without demanding known causes and preserve evidence/source limits. Radio prompts preserve one-page scope, source and no-new-system boundaries and confirm the end state before rendering. Feedback prompts ask draft-versus-send directly and preserve the final prohibition on contact. Readiness remains conditional on supplying later inputs.",
+  "minor_concerns": [
+    {
+      "labels": [
+        "R11",
+        "R16"
+      ],
+      "finding": "Setup recommendations repeated across turns."
+    },
+    {
+      "labels": [],
+      "finding": "Several conversations include repeated skill quotations that add procedural clutter."
+    },
+    {
+      "labels": [
+        "R15"
+      ],
+      "finding": "Presenter-experience answer options A and B overlap."
+    },
+    {
+      "labels": [
+        "R13"
+      ],
+      "finding": "The unused send option could state final-message approval more clearly. Draft-only was selected and preserved; no permission expansion occurred."
+    },
+    {
+      "labels": [],
+      "finding": "Effort recommendations are judgement about the later task, not measured task-execution performance."
+    }
+  ],
+  "primary_decision": "No runtime change from this small batch. Retain the minor findings for broader testing; avoid adding rules merely to polish these familiar cases."
+}

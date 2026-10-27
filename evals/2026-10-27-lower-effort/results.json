@@ -1,0 +1,363 @@
+{
+  "comparison": "One run per case and effort; four familiar regression cases, not unseen generalisation or hidden-intent recovery.",
+  "rows": [
+    {
+      "case": "min-complete-request",
+      "effort": "low",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 1,
+      "total_visible_response_words": 134,
+      "final_response_words": 73,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "standard-investigation",
+      "effort": "low",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 2,
+      "total_visible_response_words": 449,
+      "final_response_words": 308,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "max-no-process-expansion",
+      "effort": "low",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 3,
+      "total_visible_response_words": 422,
+      "final_response_words": 200,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "standard-late-permission-choice",
+      "effort": "low",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 3,
+      "total_visible_response_words": 432,
+      "final_response_words": 227,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "min-complete-request",
+      "effort": "medium",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 1,
+      "total_visible_response_words": 139,
+      "final_response_words": 71,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "standard-investigation",
+      "effort": "medium",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 2,
+      "total_visible_response_words": 420,
+      "final_response_words": 304,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "max-no-process-expansion",
+      "effort": "medium",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 3,
+      "total_visible_response_words": 497,
+      "final_response_words": 236,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "standard-late-permission-choice",
+      "effort": "medium",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 3,
+      "total_visible_response_words": 436,
+      "final_response_words": 218,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "min-complete-request",
+      "effort": "high",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 1,
+      "total_visible_response_words": 160,
+      "final_response_words": 86,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "standard-investigation",
+      "effort": "high",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 2,
+      "total_visible_response_words": 505,
+      "final_response_words": 337,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "max-no-process-expansion",
+      "effort": "high",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 3,
+      "total_visible_response_words": 518,
+      "final_response_words": 240,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "standard-late-permission-choice",
+      "effort": "high",
+      "source": "new-lower-effort-run",
+      "material_checks": "met",
+      "user_replies": 3,
+      "total_visible_response_words": 395,
+      "final_response_words": 199,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "min-complete-request",
+      "effort": "ultra",
+      "source": "published-practical-update-comparator",
+      "material_checks": "met",
+      "user_replies": 1,
+      "total_visible_response_words": 168,
+      "final_response_words": 82,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "standard-investigation",
+      "effort": "ultra",
+      "source": "published-practical-update-comparator",
+      "material_checks": "met",
+      "user_replies": 2,
+      "total_visible_response_words": 482,
+      "final_response_words": 345,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "max-no-process-expansion",
+      "effort": "ultra",
+      "source": "published-practical-update-comparator",
+      "material_checks": "met",
+      "user_replies": 3,
+      "total_visible_response_words": 548,
+      "final_response_words": 233,
+      "configuration_verified": true,
+      "prompt_only": true
+    },
+    {
+      "case": "standard-late-permission-choice",
+      "effort": "ultra",
+      "source": "published-practical-update-comparator",
+      "material_checks": "met",
+      "user_replies": 3,
+      "total_visible_response_words": 424,
+      "final_response_words": 201,
+      "configuration_verified": true,
+      "prompt_only": true
+    }
+  ],
+  "tool_audit": [
+    {
+      "run": "effort_low_min",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:12000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/model-routing.md\",max_output_tokens:6000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_medium_min",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:10000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/model-routing.md\",max_output_tokens:5000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_high_min",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:12000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/model-routing.md\",max_output_tokens:8000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_low_standard",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:12000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/standard-mode.md\",max_output_tokens:6000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/model-routing.md\",max_output_tokens:6000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_medium_standard",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:16000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/standard-mode.md snapshot/references/model-routing.md\",max_output_tokens:10000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_high_standard",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:10000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/standard-mode.md snapshot/references/model-routing.md\",max_output_tokens:10000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_low_max",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:10000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/max-mode.md\",max_output_tokens:6000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/model-routing.md\",max_output_tokens:6000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_medium_max",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:12000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/max-mode.md snapshot/references/model-routing.md\",max_output_tokens:10000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_high_max",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:12000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/max-mode.md snapshot/references/model-routing.md\",max_output_tokens:10000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_low_followup",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:12000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/standard-mode.md snapshot/references/model-routing.md\",max_output_tokens:8000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_medium_followup",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:12000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/standard-mode.md snapshot/references/model-routing.md\",max_output_tokens:8000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    },
+    {
+      "run": "effort_high_followup",
+      "calls": [
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/SKILL.md\",max_output_tokens:20000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/standard-mode.md\",max_output_tokens:8000}));\n"
+        },
+        {
+          "name": "exec",
+          "args": "text(await tools.exec_command({cmd:\"cat snapshot/references/human-reality.md\\ncat snapshot/references/model-routing.md\",max_output_tokens:12000}));\n"
+        }
+      ],
+      "finding": "Only isolated skill/reference reads; no underlying task execution."
+    }
+  ]
+}

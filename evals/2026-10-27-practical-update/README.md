@@ -4,6 +4,8 @@
 
 Session metadata confirmed **GPT-6 Astra, Ultra** for every subject turn. Recommendations of Low or Medium inside the generated replies describe the proposed later run, not the settings used in these tests. No Low/Medium/High reliability claim follows from this result.
 
+**Follow-up:** the [separate Low/Medium/High comparison](../2026-10-27-lower-effort/README.md) runs these four cases on the unchanged final candidate. It preserves the distinction between actual clarification effort and recommended execution effort.
+
 ## What changed in the observed runs
 
 | Scenario | Published baseline | Final candidate |
